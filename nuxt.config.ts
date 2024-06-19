@@ -2,7 +2,13 @@
 import path from 'path';
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@primevue/nuxt-module", "@nuxtjs/i18n", "@nuxt/fonts"],
+  modules: [
+    "@primevue/nuxt-module",
+    "@nuxtjs/i18n",
+    "@nuxt/fonts",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/color-mode"
+  ],
   i18n: {
     vueI18n: "./i18n.config.ts",
   },

@@ -1,7 +1,8 @@
 <script setup lang="ts">
-
+const mode = useColorMode();
 const toggleTheme = () => {
   document.body.classList.toggle("dark-mode");
+  mode.preference === 'dark' ? mode.preference = 'light' : mode.preference = 'dark';
 };
 const { locale, setLocale } = useI18n();
 const $t = useI18n().t;
@@ -38,7 +39,7 @@ watch(locale, () => {
 </script>
 
 <template>
-  <div id="app">
+  <div id="app" class="dark">
     <Menubar :model="item">
       <template #start>
         <Image
@@ -52,17 +53,17 @@ watch(locale, () => {
       </template>
     </Menubar>
     <Button label="Toggle Theme" @click="toggleTheme"></Button>
-    <button @click="setLocale('en')">en</button>
-    <button @click="setLocale('fr')">fr</button>
+    <Button @click="setLocale('en')">en</Button>
+    <Button @click="setLocale('fr')">fr</Button>
     <p>{{ $t('welcome') }}</p>
   </div>
 </template>
 
 <style>
-.dark-mode {
+/*.dark-mode {
   background-color: #242424;
   color: #fff;
-}
+}*/
 :root{
   font-family: 'Roboto', sans-serif;
 }
