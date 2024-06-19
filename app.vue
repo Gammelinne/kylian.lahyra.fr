@@ -66,14 +66,4 @@ watch(locale, () => {
 :root{
   font-family: 'Roboto', sans-serif;
 }
-@layer tailwind-base, primevue, tailwind-utilities;
-
-@layer tailwind-base {
-  @tailwind base;
-}
-
-@layer tailwind-utilities {
-  @tailwind components;
-  @tailwind utilities;
-}
 </style>

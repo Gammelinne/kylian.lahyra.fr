@@ -12,11 +12,5 @@ export default defineNuxtConfig({
       ripple: true,
     },
   },
-  /*primevue: {
-    options: {
-      unstyled: true
-    },
-    importPT: { from: path.resolve(__dirname, './presets/aura/aura') }      //import and apply preset 
-  },  */
   css: ["primeicons/primeicons.css"],
 });
