@@ -29,5 +29,5 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: Lahyra/lahyra:latest
+        tags: gameline/primevue-nuxt:latest
 
