@@ -1,33 +1,21 @@
-# Étape de construction
-FROM node:lts-alpine as build-stage
+FROM node:20.12.2-alpine3.18 as base
 
-# Définir le répertoire de travail
-WORKDIR /app
+# Set environment variables
+ARG PORT=3000
+ENV NODE_ENV=production
+WORKDIR /src
 
-# Installer les dépendances
-COPY package*.json ./
-RUN npm install
-
-# Copier les fichiers du projet
-COPY . .
-
-# Construire l'application
+# Build stage
+FROM base as build
+COPY --link package.json package-lock.json .
+RUN npm install --production=false
+COPY --link . .
 RUN npm run build
+RUN npm prune
 
-# Étape de production
-FROM node:lts-alpine as production-stage
-
-# Définir le répertoire de travail
-WORKDIR /app
-
-# Copier le build depuis l'étape de construction
-COPY --from=build-stage /app/.nuxt /app/.nuxt
-COPY --from=build-stage /app/static /app/static
-COPY --from=build-stage /app/node_modules /app/node_modules
-COPY --from=build-stage /app/.output /app/.output
-
-# Exposer le port (le port par défaut de Nuxt.js est 3000)
+# Expose the host and port
+ENV HOST 0.0.0.0
 EXPOSE 3000
 
-# Définir le point d'entrée
+# Run the built project with Node.js
 ENTRYPOINT ["node", ".output/server/index.mjs"]
