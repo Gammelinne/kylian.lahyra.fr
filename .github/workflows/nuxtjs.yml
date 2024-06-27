@@ -8,7 +8,7 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    environment: secrets
+    environment: Production
     steps:
     - uses: actions/checkout@v4.1.7
 
