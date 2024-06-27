@@ -12,7 +12,6 @@
     <div class="flex space-x-4 mb-8">
       <Button>{{ $t("Home.GetStarted") }}</Button>
       <Button severity="secondary">{{ $t("Home.LearnMore") }}</Button>
-      <Button severity="warning">{{ $t("Home.ContactUs") }}</Button>
     </div>
   </div>
 </template>
