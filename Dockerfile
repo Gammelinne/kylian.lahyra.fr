@@ -1,4 +1,4 @@
-FROM node:20.15.1-alpine3.19 as base
+FROM node:20.15.1-alpine3.20 as base
 
 # Set environment variables
 ARG PORT=3000
@@ -8,7 +8,7 @@ WORKDIR /src
 # Build stage
 FROM base as build
 COPY --link package.json package-lock.json ./
-RUN npm install --production=false
+RUN npm install --production=true
 COPY --link . .
 RUN npm run build
 RUN npm prune
