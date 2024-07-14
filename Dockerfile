@@ -4,6 +4,9 @@ FROM node:20.15.1-alpine3.20 as base
 ARG PORT=3000
 ENV NODE_ENV=production
 WORKDIR /src
+# copy env file
+COPY .env .env
+RUN export $(cat .env | xargs)
 
 # Build stage
 FROM base as build
