@@ -1,11 +1,5 @@
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
-import { ref } from "vue";
-import { watch, onBeforeMount } from "vue";
-
-// @ts-ignore
 import logoCesi from "../assets/images/logo/logocesi.jpg";
-// @ts-ignore
 import logoUniversity from "../assets/images/logo/Normandieuniversite.jpeg";
 
 const { locale } = useI18n();
@@ -74,7 +68,11 @@ onBeforeMount(() => {
   <h1 class="my-5 text-4xl font-bold text-center">
     {{ $t("Formation.Title") }}
   </h1>
-  <Card v-for="formation in formations" class="mx-12 my-5">
+  <Card
+    v-if="formations.length > 0"
+    v-for="formation in formations"
+    class="mx-12 my-5"
+  >
     <template #title>
       <h2 class="font-bold">{{ formation.title }}</h2>
     </template>
@@ -106,6 +104,22 @@ onBeforeMount(() => {
         target="_blank"
         icon="pi pi-link"
       />
+    </template>
+  </Card>
+  <Card v-else  class="mx-12 my-5" v-for="index in 3">
+    <template #title>
+      <h2 class="font-bold">{{ $t("Formation.Loading") }}</h2>
+    </template>
+    <template #content>
+      <div class="space-y-2">
+        <Skeleton height="50px" />
+        <Skeleton height="20px" />
+        <Skeleton height="20px" />
+        <Skeleton height="20px" />
+      </div>
+    </template>
+    <template #footer>
+      <Skeleton height="30px" />
     </template>
   </Card>
 </template>
