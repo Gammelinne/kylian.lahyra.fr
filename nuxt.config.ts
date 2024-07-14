@@ -1,5 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-import path from 'path';
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
@@ -7,7 +5,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxt/fonts",
     "@nuxtjs/tailwindcss",
-    '@nuxtjs/color-mode',
+    "@nuxtjs/color-mode",
   ],
   i18n: {
     vueI18n: "./i18n.config.ts",

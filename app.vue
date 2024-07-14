@@ -1,9 +1,8 @@
-<script setup lang="ts"></script>
-
 <template>
   <div id="app" class="dark">
     <Navbar />
     <NuxtPage />
+    <Footer />
   </div>
 </template>
 

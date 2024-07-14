@@ -1,22 +1,81 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div
-    class="flex flex-col justify-center items-center min-h-screen title-background mt-[-4rem]"
-  >
-    <h1 class="text-4xl mb-4">
-      {{ $t("Home.Title.1") }} <span class="text-purple-500">{{ $t("Home.Title.2") }}</span>
-      {{ $t("Home.Title.3") }}
-      <span class="text-purple-500">{{ $t("Home.Title.4") }}</span>
-    </h1>
-    <div class="flex space-x-4 mb-8">
-      <Button>{{ $t("Home.GetStarted") }}</Button>
-      <Button severity="secondary">{{ $t("Home.LearnMore") }}</Button>
+  <div class="index-background">
+    <div class="flex min-h-screen mt-[-6.8rem]">
+      <!-- Partie gauche -->
+      <div class="flex flex-col justify-center w-6/12 mx-8">
+        <h1 class="text-4xl mb-4 font-bold">
+          {{ $t("Home.Title.FirstName") }}
+          <span class="text-purple-500">{{ $t("Home.Title.LastName") }}</span>
+        </h1>
+        <div class="flex space-x-2 mb-5">
+          <h2 class="text-xl">
+            {{ $t("Home.Description") }}
+          </h2>
+        </div>
+        <div class="flex space-x-2 mb-5">
+          <Button
+            size="small"
+            as="a"
+            :label="$t('Home.Resume')"
+            href="/resume.pdf"
+            target="_blank"
+            icon="pi pi-file-pdf"
+          />
+          <Button
+            size="small"
+            as="a"
+            :label="$t('Home.Portfolio')"
+            href="https://kylianrenault.lahyra.fr"
+            target="_blank"
+            icon="pi pi-link"
+          />
+          <Button
+            size="small"
+            as="a"
+            icon="pi pi-github"
+            href="https://github.com/Gammelinne"
+            severity="secondary"
+            target="_blank"
+          />
+          <Button
+            size="small"
+            as="a"
+            severity="secondary"
+            icon="pi pi-linkedin"
+            href="https://www.linkedin.com/in/kylian-renault/"
+            target="_blank"
+          />
+          <Button
+            size="small"
+            as="a"
+            severity="secondary"
+            icon="pi pi-envelope"
+            href="mailto:kylian.noe14@gmail.com"
+            target="_blank"
+          />
+        </div>
+      </div>
+      <!-- Partie droite -->
+      <div class="flex flex-col justify-center w-6/12 mx-8">
+        <Card>
+          <template #title>
+            <h2 class="text-2xl font-bold text-center">
+              {{ $t("Home.GithubActivity") }}
+            </h2>
+          </template>
+          <template #content>
+            <Heatmap />
+          </template>
+        </Card>
+      </div>
     </div>
   </div>
 </template>
 
 <style>
+/* Background Animation */
 @-webkit-keyframes bg-scrolling-reverse {
   100% {
     background-position: 50px 50px;
@@ -57,10 +116,8 @@
     background-position: 50px 50px;
   }
 }
-/* Main styles */
-
-.title-background {
-  /* Vos styles existants pour le quadrillage */
+/* Title Background */
+.index-background {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.09) 5%, transparent 5%),
     linear-gradient(rgba(0, 0, 0, 0.09) 5%, transparent 5%);
   background-size: 50px 50px;

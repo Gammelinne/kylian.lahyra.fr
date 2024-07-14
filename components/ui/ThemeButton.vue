@@ -5,6 +5,7 @@ const toggleTheme = () => {
   mode.preference === "dark"
     ? (mode.preference = "light")
     : (mode.preference = "dark");
+  localStorage.setItem("theme", mode.preference);
 };
 </script>
 

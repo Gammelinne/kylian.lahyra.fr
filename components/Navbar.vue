@@ -6,6 +6,9 @@ import { getRoutes } from "@/route";
 import LangButton from "./ui/LangButton.vue";
 import ThemeButton from "./ui/ThemeButton.vue";
 
+// Import assets
+import logo from "@/assets/images/logos/logo.png";
+
 // Set Locale
 const { locale } = useI18n();
 const $t = useI18n().t;
@@ -25,9 +28,10 @@ watch(locale, () => {
   <Menubar class="Navbar" :model="route">
     <!-- Start template (logo and route) -->
     <template #start>
+      <!-- Logo -->
       <Image
         class="mx-2"
-        src="https://images.freecreatives.com/wp-content/uploads/2015/04/logo007.png"
+        :src="logo"
         alt="logo"
         width="50"
       />
