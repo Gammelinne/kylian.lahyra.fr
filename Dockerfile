@@ -4,9 +4,12 @@ FROM node:20.15.1-alpine3.20 as base
 ARG PORT=3000
 ENV NODE_ENV=production
 WORKDIR /src
-#create env file to put VITE_GITHUB_TOKEN
+ARG VITE_GITHUB_TOKEN
+ENV VITE_GITHUB_TOKEN=${VITE_GITHUB_TOKEN}
+
+# Create env file
 RUN echo "PORT=$PORT" > .env
-RUN echo "VITE_GITHUB_TOKEN=${{secret.VITE_GITHUB_TOKEN}}" >> .env
+RUN echo "VITE_GITHUB_TOKEN=$VITE_GITHUB_TOKEN" >> .env
 
 
 # Build stage

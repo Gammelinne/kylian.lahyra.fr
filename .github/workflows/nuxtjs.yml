@@ -30,3 +30,5 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: gameline/primevue-nuxt:latest
+        build-args: |
+          MY_ENV_VAR= ${{ secrets.VITE_GITHUB_TOKEN }}
