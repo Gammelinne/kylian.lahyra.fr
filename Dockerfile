@@ -11,7 +11,7 @@ RUN export $(cat .env | xargs)
 # Build stage
 FROM base as build
 COPY --link package.json package-lock.json ./
-RUN npm install --production=true
+RUN npm install --production=false
 COPY --link . .
 RUN npm run build
 RUN npm prune
