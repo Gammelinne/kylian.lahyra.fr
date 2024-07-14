@@ -22,4 +22,5 @@ export default defineNuxtConfig({
 
   css: ["primeicons/primeicons.css"],
   compatibilityDate: "2024-07-14",
+  plugins: ["~/plugins/calendar-heatmap.client.ts"],
 });

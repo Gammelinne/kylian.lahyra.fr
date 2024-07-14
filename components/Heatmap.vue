@@ -1,9 +1,6 @@
 <script setup lang="ts">
-
-/* Import */
-import { CalendarHeatmap } from "vue3-calendar-heatmap";
-
 /* Variables */
+
 const mode = useColorMode();
 const heatMapData = ref<{ date: string; count: number }[]>([]);
 const githubData = ref({
@@ -72,22 +69,23 @@ onBeforeMount(async () => {
   githubData.value = data;
   heatMapData.value = extractHeatMapData(data);
 });
-
 </script>
 
 <template>
   <div v-if="heatMapData.length > 0">
-    <CalendarHeatmap
-      :values="heatMapData"
-      :endDate="new Date()"
-      :round="3"
-      :range-color="
-        mode.preference === 'dark'
-          ? ['#0d1117', '#0d1117', '#40c463', '#30a14e', '#216e39']
-          : ['#ebedf0', '#ebedf0', '#40c463', '#30a14e', '#216e39']
-      "
-      :max="10"
-    />
+    <ClientOnly>
+      <CalendarMap
+        :values="heatMapData"
+        :endDate="new Date()"
+        :round="3"
+        :range-color="
+          mode.preference === 'dark'
+            ? ['#0d1117', '#0d1117', '#40c463', '#30a14e', '#216e39']
+            : ['#ebedf0', '#ebedf0', '#40c463', '#30a14e', '#216e39']
+        "
+        :max="10"
+      />
+    </ClientOnly>
     <h2 class="text-lg font-bold text-center">
       {{
         githubData?.data?.user?.contributionsCollection?.contributionCalendar
@@ -97,6 +95,6 @@ onBeforeMount(async () => {
     </h2>
   </div>
   <div v-else>
-     <Skeleton height="200px" />
+    <Skeleton height="200px" />
   </div>
 </template>
