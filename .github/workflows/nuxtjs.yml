@@ -23,11 +23,6 @@ jobs:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
-    - name: Create .env file
-      run: |
-        echo "VITE_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> .env
-        echo "ANOTHER_VARIABLE=another_value" >> .env
-
     - name: Build and push
       uses: docker/build-push-action@v6.2.0
       with:

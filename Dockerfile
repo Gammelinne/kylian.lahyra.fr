@@ -4,9 +4,10 @@ FROM node:20.15.1-alpine3.20 as base
 ARG PORT=3000
 ENV NODE_ENV=production
 WORKDIR /src
-# copy env file
-COPY .env .env
-RUN export $(cat .env | xargs)
+#create env file to put VITE_GITHUB_TOKEN
+RUN echo "PORT=$PORT" > .env
+RUN echo "VITE_GITHUB_TOKEN=${{secret.VITE_GITHUB_TOKEN}}" >> .env
+
 
 # Build stage
 FROM base as build
