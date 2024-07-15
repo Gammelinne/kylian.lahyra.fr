@@ -3,9 +3,11 @@ FROM node:20.15.1-alpine3.20 as base
 # Set environment variables
 ARG PORT=3000
 ENV NODE_ENV=production
+ARG NUXT_GITHUB_TOKEN
+ENV NUXT_GITHUB_TOKEN=$NUXT_GITHUB_TOKEN
+
+# Create app directory
 WORKDIR /src
-
-
 
 
 # Build stage
