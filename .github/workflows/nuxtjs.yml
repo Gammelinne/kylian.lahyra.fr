@@ -31,4 +31,4 @@ jobs:
         push: true
         tags: gameline/primevue-nuxt:latest
         build-args: |
-          MY_ENV_VAR= ${{ secrets.VITE_GITHUB_TOKEN }}
+          NUXT_GITHUB_TOKEN=${{ secrets.VITE_GITHUB_TOKEN }}

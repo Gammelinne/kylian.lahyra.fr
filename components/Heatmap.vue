@@ -2,6 +2,7 @@
 /* Variables */
 
 const mode = useColorMode();
+const config = useRuntimeConfig()
 const heatMapData = ref<{ date: string; count: number }[]>([]);
 const githubData = ref({
   data: {
@@ -20,7 +21,7 @@ const githubData = ref({
 /* Fonction */
 async function getContributions() {
   const headers = {
-    Authorization: `bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
+    Authorization: `bearer ${config.public.githubToken}`,
   };
   const body = {
     query: `query {
