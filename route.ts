@@ -9,14 +9,14 @@ export const getRoutes = ($t: any, router: any) => [
     },
   },
   {
-    label: $t("Route.Education.Title"),
+    label: $t("Route.Education"),
     icon: "pi pi-fw pi-graduation-cap",
     command: () => {
       router.push("/education");
     }
   },
   {
-    label: $t("Route.Experience.Title"),
+    label: $t("Route.Experience"),
     icon: "pi pi-fw pi-briefcase",
     command: () => {
       router.push("/experience");
@@ -75,12 +75,5 @@ export const getRoutes = ($t: any, router: any) => [
         },
       },
     ],
-  },
-  {
-    label: $t("Route.Contact"),
-    icon: "pi pi-fw pi-envelope",
-    command: () => {
-      router.push("/contact");
-    },
   },
 ];

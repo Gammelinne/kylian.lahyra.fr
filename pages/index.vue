@@ -2,10 +2,14 @@
 
 <template>
   <div class="index-background">
-    <div class="flex min-h-screen mt-[-6.8rem]">
+    <div
+      class="flex flex-col md:flex-row min-h-screen md:mt-[-4.5rem] mx-8 space-x-5"
+    >
       <!-- Partie gauche -->
-      <div class="flex flex-col justify-center w-6/12 mx-8">
-        <h1 class="text-4xl mb-4 font-bold">
+      <div
+        class="flex flex-col justify-center w-full md:w-6/12 text-center sm:text-left"
+      >
+        <h1 class="text-4xl mt-12 mb-4 font-bold">
           {{ $t("Home.Title.FirstName") }}
           <span class="text-purple-500">{{ $t("Home.Title.LastName") }}</span>
         </h1>
@@ -14,7 +18,9 @@
             {{ $t("Home.Description") }}
           </h2>
         </div>
-        <div class="flex space-x-2 mb-5">
+        <div
+          class="flex space-x-2 mb-5 items-center justify-center sm:justify-start"
+        >
           <Button
             size="small"
             as="a"
@@ -58,7 +64,7 @@
         </div>
       </div>
       <!-- Partie droite -->
-      <div class="flex flex-col justify-center w-6/12 mx-8">
+      <div class="flex flex-col justify-center w-full md:w-6/12">
         <Card>
           <template #title>
             <h2 class="text-2xl font-bold text-center">
@@ -67,6 +73,8 @@
           </template>
           <template #content>
             <Heatmap />
+            <hr class="my-2" />
+            <Information />
           </template>
         </Card>
       </div>
