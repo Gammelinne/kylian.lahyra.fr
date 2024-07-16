@@ -1,3 +1,4 @@
+const Email = "kylian.renault@viacesi.fr";
 export default defineI18nConfig(() => ({
   legacy: false,
   locale: "fr",
@@ -8,12 +9,11 @@ export default defineI18nConfig(() => ({
           FirstName: "Kylian",
           LastName: "Renault",
         },
-        Infos:{
+        Infos: {
           Title: "My informations ",
           Name: "Kylian Renault",
           Age: "23 years old",
           Location: "Caen, France",
-          Email: "kylian.renault@viacesi.fr",
           Phone: "+33 6 67 59 06 50",
           Birth: "14 August 2001",
           Language: "French (native), English (945 TOEIC), Spanish (basic)",
@@ -50,7 +50,8 @@ export default defineI18nConfig(() => ({
         Title: "Formations",
         Website: "Learn more",
         One: {
-          Title: "CESI Engineering School: Computer Science specialization in data science and artificial intelligence",
+          Title:
+            "CESI Engineering School: Computer Science specialization in data science and artificial intelligence",
           Date: "Since September 2022",
           Website:
             "https://www.cesi.fr/programmes/cursus-ingenieur-5-ans/#cycleprepa",
@@ -59,7 +60,8 @@ export default defineI18nConfig(() => ({
           Location: "4 place boston - 14200 Hérouville-Saint-Clair",
         },
         Two: {
-          Title: "CESI Engineering School: Integrated preparatory class: computer science minor",
+          Title:
+            "CESI Engineering School: Integrated preparatory class: computer science minor",
           Date: "09/2020 - 07/2022",
           Website:
             "https://www.cesi.fr/programmes/cursus-ingenieur-5-ans/#cursusing%C3%A9",
@@ -77,7 +79,8 @@ export default defineI18nConfig(() => ({
           Location: "Avenue de la Côte de Nacre - 14000 Caen",
         },
         Four: {
-          Title: "High school Salvador Allende: Obtaining the baccalaureate S option SVT",
+          Title:
+            "High school Salvador Allende: Obtaining the baccalaureate S option SVT",
           Date: "09/2016 - 07/2019",
           Website: "https://lycee-salvador-allende.etab.ac-caen.fr/",
           Description:
@@ -93,12 +96,11 @@ export default defineI18nConfig(() => ({
           FirstName: "Kylian",
           LastName: "Renault",
         },
-        Infos:{
+        Infos: {
           Title: "Mes informations",
           Name: "Kylian Renault",
           Age: "23 ans",
           Location: "Caen, France",
-          Email: "kylian.renault@viacesi.fr",
           Phone: "+33 6 67 59 06 50",
           Birth: "14 août 2001",
           Language: "Français (natif), Anglais (945 TOEIC), Espagnol (basique)",
@@ -135,7 +137,8 @@ export default defineI18nConfig(() => ({
         Title: "Formations",
         Website: "En savoir plus",
         One: {
-          Title: "CESI École d'ingénieurs: spécialité informatique en data science et intelligence artificielle",
+          Title:
+            "CESI École d'ingénieurs: spécialité informatique en data science et intelligence artificielle",
           Date: "Depuis septembre 2022",
           Website:
             "https://www.cesi.fr/programmes/cursus-ingenieur-5-ans/#cycleprepa",
@@ -144,7 +147,8 @@ export default defineI18nConfig(() => ({
           Location: "4 place boston - 14200 Hérouville-Saint-Clair",
         },
         Two: {
-          Title: "CESI École d'ingénieurs: Classe préparatoire intégrée: mineure informatique",
+          Title:
+            "CESI École d'ingénieurs: Classe préparatoire intégrée: mineure informatique",
           Date: "09/2020 - 07/2022",
           Website:
             "https://www.cesi.fr/programmes/cursus-ingenieur-5-ans/#cursusing%C3%A9",
@@ -162,7 +166,8 @@ export default defineI18nConfig(() => ({
           Location: "Avenue de la Côte de Nacre - 14000 Caen",
         },
         Four: {
-          Title: "Lycée Salvador Allende: Obtention du baccalauréat S option SVT",
+          Title:
+            "Lycée Salvador Allende: Obtention du baccalauréat S option SVT",
           Date: "09/2016 - 07/2019",
           Website: "https://lycee-salvador-allende.etab.ac-caen.fr/",
           Description:

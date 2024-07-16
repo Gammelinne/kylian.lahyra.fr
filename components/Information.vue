@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const email = "kylian.renault@viacesi.fr";
 const infoColumns: Ref<{ text: string; icon: string }[][]> = ref([
   [
     { text: "Home.Infos.Name", icon: "user" },
@@ -7,7 +8,7 @@ const infoColumns: Ref<{ text: string; icon: string }[][]> = ref([
   ],
   [
     { text: "Home.Infos.Location", icon: "map-marker" },
-    { text: "Home.Infos.Email", icon: "envelope" },
+    { text: email, icon: "envelope" },
     { text: "Home.Infos.Phone", icon: "phone" },
   ],
   [
@@ -18,14 +19,14 @@ const infoColumns: Ref<{ text: string; icon: string }[][]> = ref([
 </script>
 
 <template>
-  <h1 class="text-center text-lg font-bold my-2">
+  <h2 class="text-2xl font-bold text-center">
     {{ $t("Home.Infos.Title") }}
-  </h1>
-  <div class="flex">
+  </h2>
+  <div class="flex flex-col md:flex-row">
     <div
       v-for="(info, index) in infoColumns"
       :key="index"
-      class="flex flex-col w-1/3"
+      class="flex flex-col w-1/3 w-full"
     >
       <p
         v-for="(item, idx) in info"
@@ -33,7 +34,7 @@ const infoColumns: Ref<{ text: string; icon: string }[][]> = ref([
         class="text-sm text-center my-1"
       >
         <i :class="`pi pi-${item.icon}`" />
-        {{ $t(item.text) }}
+        {{ item.text !== email ? $t(item.text) : item.text }}
       </p>
     </div>
   </div>

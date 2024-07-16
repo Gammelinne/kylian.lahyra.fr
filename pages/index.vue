@@ -3,7 +3,7 @@
 <template>
   <div class="index-background">
     <div
-      class="flex flex-col md:flex-row min-h-screen md:mt-[-4.5rem] mx-8 space-x-5"
+      class="flex flex-col md:flex-row min-h-screen md:mt-[-4.5rem] mx-8 space-x-3"
     >
       <!-- Partie gauche -->
       <div
@@ -64,7 +64,7 @@
         </div>
       </div>
       <!-- Partie droite -->
-      <div class="flex flex-col justify-center w-full md:w-6/12">
+      <div class="flex flex-col justify-center">
         <Card>
           <template #title>
             <h2 class="text-2xl font-bold text-center">
