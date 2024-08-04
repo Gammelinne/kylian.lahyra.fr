@@ -48,8 +48,8 @@ export default defineI18nConfig(() => ({
       },
       Formation: {
         Title: "Formations",
-        Website: "Learn more",
-        One: {
+        More: "Learn more",
+        Four: {
           Title:
             "CESI Engineering School: Computer Science specialization in data science and artificial intelligence",
           Date: "Since September 2022",
@@ -59,7 +59,7 @@ export default defineI18nConfig(() => ({
             "Automony, Teamwork, Network, Development, Project Management, English",
           Location: "4 place boston - 14200 Hérouville-Saint-Clair",
         },
-        Two: {
+        Three: {
           Title:
             "CESI Engineering School: Integrated preparatory class: computer science minor",
           Date: "09/2020 - 07/2022",
@@ -69,7 +69,7 @@ export default defineI18nConfig(() => ({
             "Group work,Mathematics,Computer science,Physics,English",
           Location: "4 place boston - 14200 Hérouville-Saint-Clair",
         },
-        Three: {
+        Two: {
           Title:
             "Caen Normandy University: First year of a degree in physics with an option in computer science",
           Date: "09/2019 - 07/2020",
@@ -78,7 +78,7 @@ export default defineI18nConfig(() => ({
           Description: "Mathematics,Physics,Electricity,English",
           Location: "Avenue de la Côte de Nacre - 14000 Caen",
         },
-        Four: {
+        One: {
           Title:
             "High school Salvador Allende: Obtaining the baccalaureate S option SVT",
           Date: "09/2016 - 07/2019",
@@ -135,8 +135,8 @@ export default defineI18nConfig(() => ({
       },
       Formation: {
         Title: "Formations",
-        Website: "En savoir plus",
-        One: {
+        More: "En savoir plus",
+        Four: {
           Title:
             "CESI École d'ingénieurs: spécialité informatique en data science et intelligence artificielle",
           Date: "Depuis septembre 2022",
@@ -146,7 +146,7 @@ export default defineI18nConfig(() => ({
             "Autonomie, Travail en équipe, Réseau, Développement, Gestion de projet, Anglais",
           Location: "4 place boston - 14200 Hérouville-Saint-Clair",
         },
-        Two: {
+        Three: {
           Title:
             "CESI École d'ingénieurs: Classe préparatoire intégrée: mineure informatique",
           Date: "09/2020 - 07/2022",
@@ -156,7 +156,7 @@ export default defineI18nConfig(() => ({
             "Travail de groupe,Mathématiques,Informatique,Physique,Anglais",
           Location: "4 place boston - 14200 Hérouville-Saint-Clair",
         },
-        Three: {
+        Two: {
           Title:
             "Univeristé de Caen Normandie: Première année de licence de physique avec option informatique",
           Date: "09/2019 - 07/2020",
@@ -165,7 +165,7 @@ export default defineI18nConfig(() => ({
           Description: "Mathématiques,Physique,Electricité,Anglais",
           Location: "Avenue de la Côte de Nacre - 14000 Caen",
         },
-        Four: {
+        One: {
           Title:
             "Lycée Salvador Allende: Obtention du baccalauréat S option SVT",
           Date: "09/2016 - 07/2019",
@@ -174,6 +174,77 @@ export default defineI18nConfig(() => ({
             "Mathématiques,Physique,Anglais,Espagnol,SVT,Histoire,Géographie,Philosophie",
           Location:
             "15 Rue Guyon de Guercheville - 14200 Hérouville Saint Clair",
+        },
+      },
+      Experience: {
+        Title: "Experiences professionnelles",
+        Website: "En savoir plus",
+        Eight: {
+          Title: "Stage international en développement web/python",
+          Date: "09/2023 - 01/2024",
+          Website: "https://www.resqplus.eu/partners/aalborg-university",
+          Description:
+            "Conception d'un tableau de bord avec le framework Shiny pour identifier des pistes d'amélioration par rapport au tableau de bord existant, en collaboration avec d'éminents professeurs tels que M. HENDRIK KNOCHE et des doctorants comme HAMZAH ZIADEH (Python). - Amélioration du tableau de bord existant en collaboration avec des médecins de toute l'Europe l'utilisant (R). - Création d'un chatbot en utilisant le framework Rasa pour générer des graphiques spécifiques aux besoins des médecins (Python)",
+          Location: "Université d'Aalborg - 9000 Aalborg (Danemark)",
+        },
+        Seven: {
+          Title: "Animateur club de plage (Travail saisonnier)",
+          Date: "08/2023",
+          Website: "https://www.cabourg-plage.fr/",
+          Description:
+            "Animateur dans un club de plage avec encadrement d'enfants agées de 5 à 10 ans",
+          Location: "Croco Club Cabourg - 14390 Cabourg",
+        },
+        One: {
+          Title: "Stage developpeur web/mobile - Qwice",
+          Date: "01/2023 - 04/2023",
+          Website: "https://qwice.org/",
+          Description:
+            "Rendre une application web existante compatible avec une application mobile native Android/iOS avec le framework Capacitor.js (android studio / xcode). - Ajouter des notifications push à l'application (firebase / php). - Ajout et correction de fonctionnalités sur le frontend (VueJs).",
+          Location: "Normandie incubation - 14000 Caen",
+        },
+        Two: {
+          Title: "Stage développeur fullstack",
+          Date: "04/2022 - 08/2022",
+          Website:
+            "https://boomerangweb.net/gestion-des-achats-bons-de-commande/",
+          Description:
+            "Création d'une interface gestion clients permettant la centralisation des serveurs (Laravel + Vuejs + MySQL). - Création de scripts bash permettant de connaitre l'état des serveurs (bash). - Tests unitaires des fonctions les plus critiques (PHPUnit + Mockery).",
+          Location: "Boomerang Web - 14000 Caen",
+        },
+        Three: {
+          Title: "Assistant fabmanager bénévole",
+          Date: "09/2021 - 01/2022",
+          Website: "https://www.facebook.com/lepavillonorb",
+          Description:
+            "Cours d'informatiques basiques (Word, Excel, Powerpoint, Internet, etc.) à des personnes débutantes. - Utilisation des machines du fablab (imprimante 3D, découpeuse laser, etc.).",
+          Location: "Centre socioculturel - Ouistreham",
+        },
+        Four: {
+          Title: "Employé de restauration (Travail saisonnier)",
+          Date: "07/2019 - 09/2019",
+          Website: "https://festyland.com/",
+          Description:
+            "Préparation des commandes des clients (en cuisine). - Service des clients. - Nettoyage des locaux.",
+          Location: "Festyland - 14652 Carpiquet",
+        },
+        Five: {
+          Title: "Ouvrier manœuvre (Travail saisonnier)",
+          Date: "06/2020 - 08/2020",
+          Website:
+            "https://www.maugergazmedicaux.fr/nos-services/vente-de-materiels-dalimentation-gaz-medicaux/",
+          Description:
+            "Installation de tuyaux d'oxygène et d'air médical dans des hôpitaux. - Installation de prises murales d'oxygène et d'air médical dans des hôpitaux. - Installation de centrales d'oxygène et d'air médical dans des hôpitaux.",
+          Location: "Mauger Gaz Médicaux - 14460 Colombelles",
+        },
+        Six: {
+          Title: "Ouvrier manœuvre (Travail saisonnier)",
+          Date: "08/2018",
+          Website:
+            "https://www.maugergazmedicaux.fr/nos-services/vente-de-materiels-dalimentation-gaz-medicaux/",
+          Description:
+            "Installation de tuyaux d'oxygène et d'air médical dans des hôpitaux. - Installation de prises murales d'oxygène et d'air médical dans des hôpitaux. - Installation de centrales d'oxygène et d'air médical dans des hôpitaux.",
+          Location: "Mauger Gaz Médicaux - 14460 Colombelles",
         },
       },
     },

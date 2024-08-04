@@ -20,38 +20,38 @@ const updateFormations = () => {
   formations.value = [
     {
       id: 1,
-      title: $t("Formation.One.Title"),
-      location: $t("Formation.One.Location"),
-      website: $t("Formation.One.Website"),
-      date: $t("Formation.One.Date"),
-      description: $t("Formation.One.Description"),
-      logo: logoCesi,
-    },
-    {
-      id: 2,
-      title: $t("Formation.Two.Title"),
-      location: $t("Formation.Two.Location"),
-      website: $t("Formation.Two.Website"),
-      date: $t("Formation.Two.Date"),
-      description: $t("Formation.Two.Description"),
-      logo: logoCesi,
-    },
-    {
-      id: 3,
-      title: $t("Formation.Three.Title"),
-      location: $t("Formation.Three.Location"),
-      website: $t("Formation.Three.Website"),
-      date: $t("Formation.Three.Date"),
-      description: $t("Formation.Three.Description"),
-      logo: logoUniversity,
-    },
-    {
-      id: 4,
       title: $t("Formation.Four.Title"),
       location: $t("Formation.Four.Location"),
       website: $t("Formation.Four.Website"),
       date: $t("Formation.Four.Date"),
       description: $t("Formation.Four.Description"),
+      logo: logoCesi,
+    },
+    {
+      id: 2,
+      title: $t("Formation.Three.Title"),
+      location: $t("Formation.Three.Location"),
+      website: $t("Formation.Three.Website"),
+      date: $t("Formation.Three.Date"),
+      description: $t("Formation.Three.Description"),
+      logo: logoCesi,
+    },
+    {
+      id: 3,
+      title: $t("Formation.Two.Title"),
+      location: $t("Formation.Two.Location"),
+      website: $t("Formation.Two.Website"),
+      date: $t("Formation.Two.Date"),
+      description: $t("Formation.Two.Description"),
+      logo: logoUniversity,
+    },
+    {
+      id: 4,
+      title: $t("Formation.One.Title"),
+      location: $t("Formation.One.Location"),
+      website: $t("Formation.One.Website"),
+      date: $t("Formation.One.Date"),
+      description: $t("Formation.One.Description"),
     },
   ];
 };
@@ -99,6 +99,7 @@ onBeforeMount(() => {
         severity="success"
         size="small"
         as="a"
+        class="mt-2"
         :label="$t('Formation.More')"
         :href="formation.website"
         target="_blank"

@@ -13,9 +13,10 @@ watch(locale, () => {
 
 <template>
   <Button
+    class="p-button-rounded"
+    text
     @click="locale === 'en' ? setLocale('fr') : setLocale('en')"
     :icon="locale === 'en' ? 'pi pi-globe' : 'pi pi-globe'"
     :label="locale === 'en' ? 'fr' : 'en'"
-    text
   />
 </template>
