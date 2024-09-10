@@ -32,7 +32,7 @@ export default defineI18nConfig(() => ({
         Home: "Home",
         Projects: {
           Title: "Projects",
-          Lahyra: "Lahyra",
+          Development: "Development",
           Music: "Music",
           Games: "Games",
         },
@@ -47,6 +47,7 @@ export default defineI18nConfig(() => ({
         Experience: "Experiences",
       },
       Formation: {
+        Loading: "Loading...",
         Title: "Formations",
         More: "Learn more",
         Four: {
@@ -89,7 +90,92 @@ export default defineI18nConfig(() => ({
             "15 Rue Guyon de Guercheville - 14200 Hérouville Saint Clair",
         },
       },
+      Experience: {
+        Title: "Professional Experiences",
+        Website: "Learn more",
+        ComputerScience : "Related to computer science",
+        SeasonalJobs : "Seasonal work",
+        Nine: {
+          Title: "Beach Club Animator (Seasonal Work)",
+          Date: "07/2024 - 08/2024",
+          Website: "https://www.cabourg-plage.fr/",
+          Description:
+            "Animator at a beach club supervising children aged 3 to 14 years",
+          Location: "Croco Club Cabourg - 14390 Cabourg",
+        },
+        Eight: {
+          Title: "International Internship in Web/Python Development",
+          Date: "09/2023 - 01/2024",
+          Website: "https://www.resqplus.eu/partners/aalborg-university",
+          Description:
+            "Designing a dashboard using the Shiny framework to identify improvement opportunities for the existing dashboard, collaborating with prominent professors such as Mr. HENDRIK KNOCHE and PhD students like HAMZAH ZIADEH (Python). - Improving the existing dashboard in collaboration with doctors from across Europe who use it (R). - Creating a chatbot using the Rasa framework to generate charts tailored to the needs of doctors (Python).",
+          Location: "Aalborg University - 9000 Aalborg (Denmark)",
+        },
+        Seven: {
+          Title: "Beach Club Animator (Seasonal Work)",
+          Date: "08/2023",
+          Website: "https://www.cabourg-plage.fr/",
+          Description:
+            "Animator at a beach club supervising children aged 5 to 10 years",
+          Location: "Croco Club Cabourg - 14390 Cabourg",
+        },
+        Six: {
+          Title: "Web/Mobile Developer Internship - Qwice",
+          Date: "01/2023 - 04/2023",
+          Website: "https://qwice.org/",
+          Description:
+            "Making an existing web application compatible with a native Android/iOS mobile application using the Capacitor.js framework (Android Studio / Xcode). - Adding push notifications to the app (Firebase / PHP). - Adding and fixing features on the frontend (VueJs).",
+          Location: "Normandie Incubation - 14000 Caen",
+        },
+        Five: {
+          Title: "Fullstack Developer Internship",
+          Date: "04/2022 - 08/2022",
+          Website:
+            "https://boomerangweb.net/gestion-des-achats-bons-de-commande/",
+          Description:
+            "Creating a client management interface allowing server centralization (Laravel + Vuejs + MySQL). - Creating bash scripts to monitor server statuses (bash). - Unit testing of the most critical functions (PHPUnit + Mockery).",
+          Location: "Boomerang Web - 14000 Caen",
+        },
+        Four: {
+          Title: "Volunteer Assistant Fab Manager",
+          Date: "09/2021 - 01/2022",
+          Website: "https://www.facebook.com/lepavillonorb",
+          Description:
+            "Basic computer lessons (Word, Excel, Powerpoint, Internet, etc.) for beginners. - Use of fablab machines (3D printer, laser cutter, etc.).",
+          Location: "Sociocultural Center - Ouistreham",
+        },
+        Three: {
+          Title: "Restaurant Employee (Seasonal Work)",
+          Date: "07/2019 - 09/2019",
+          Website: "https://festyland.com/",
+          Description:
+            "Preparing customer orders (in the kitchen). - Serving customers. - Cleaning the premises.",
+          Location: "Festyland - 14652 Carpiquet",
+        },
+        Two: {
+          Title: "Laborer (Seasonal Work)",
+          Date: "06/2020 - 08/2020",
+          Website:
+            "https://www.maugergazmedicaux.fr/nos-services/vente-de-materiels-dalimentation-gaz-medicaux/",
+          Description:
+            "Installing oxygen and medical air pipes in hospitals. - Installing wall-mounted oxygen and medical air outlets in hospitals. - Installing oxygen and medical air centers in hospitals.",
+          Location: "Mauger Gaz Médicaux - 14460 Colombelles",
+        },
+        One: {
+          Title: "Laborer (Seasonal Work)",
+          Date: "08/2018",
+          Website:
+            "https://www.maugergazmedicaux.fr/nos-services/vente-de-materiels-dalimentation-gaz-medicaux/",
+          Description:
+            "Installing oxygen and medical air pipes in hospitals. - Installing wall-mounted oxygen and medical air outlets in hospitals. - Installing oxygen and medical air centers in hospitals.",
+          Location: "Mauger Gaz Médicaux - 14460 Colombelles",
+        },
+      },
     },
+
+
+
+
     fr: {
       Home: {
         Title: {
@@ -119,7 +205,7 @@ export default defineI18nConfig(() => ({
         Home: "Accueil",
         Projects: {
           Title: "Projets",
-          Lahyra: "Lahyra",
+          Development: "Développement",
           Music: "Musique",
           Games: "Jeux",
         },
@@ -134,6 +220,7 @@ export default defineI18nConfig(() => ({
         Experience: "Expériences",
       },
       Formation: {
+        Loading: "Chargement...",
         Title: "Formations",
         More: "En savoir plus",
         Four: {
@@ -179,6 +266,16 @@ export default defineI18nConfig(() => ({
       Experience: {
         Title: "Experiences professionnelles",
         Website: "En savoir plus",
+        ComputerScience : "En lien avec l'informatique",
+        SeasonalJobs : "Travail saisonnier",
+        Nine: {
+          Title: "Animateur club de plage (Travail saisonnier)",
+          Date: "07/2024 - 08/2024",
+          Website: "https://www.cabourg-plage.fr/",
+          Description:
+            "Animateur dans un club de plage avec encadrement d'enfants agées de 3 à 14 ans",
+          Location: "Croco Club Cabourg - 14390 Cabourg",
+        },
         Eight: {
           Title: "Stage international en développement web/python",
           Date: "09/2023 - 01/2024",
@@ -195,7 +292,7 @@ export default defineI18nConfig(() => ({
             "Animateur dans un club de plage avec encadrement d'enfants agées de 5 à 10 ans",
           Location: "Croco Club Cabourg - 14390 Cabourg",
         },
-        One: {
+        Six: {
           Title: "Stage developpeur web/mobile - Qwice",
           Date: "01/2023 - 04/2023",
           Website: "https://qwice.org/",
@@ -203,7 +300,7 @@ export default defineI18nConfig(() => ({
             "Rendre une application web existante compatible avec une application mobile native Android/iOS avec le framework Capacitor.js (android studio / xcode). - Ajouter des notifications push à l'application (firebase / php). - Ajout et correction de fonctionnalités sur le frontend (VueJs).",
           Location: "Normandie incubation - 14000 Caen",
         },
-        Two: {
+        Five: {
           Title: "Stage développeur fullstack",
           Date: "04/2022 - 08/2022",
           Website:
@@ -212,7 +309,7 @@ export default defineI18nConfig(() => ({
             "Création d'une interface gestion clients permettant la centralisation des serveurs (Laravel + Vuejs + MySQL). - Création de scripts bash permettant de connaitre l'état des serveurs (bash). - Tests unitaires des fonctions les plus critiques (PHPUnit + Mockery).",
           Location: "Boomerang Web - 14000 Caen",
         },
-        Three: {
+        Four: {
           Title: "Assistant fabmanager bénévole",
           Date: "09/2021 - 01/2022",
           Website: "https://www.facebook.com/lepavillonorb",
@@ -220,7 +317,7 @@ export default defineI18nConfig(() => ({
             "Cours d'informatiques basiques (Word, Excel, Powerpoint, Internet, etc.) à des personnes débutantes. - Utilisation des machines du fablab (imprimante 3D, découpeuse laser, etc.).",
           Location: "Centre socioculturel - Ouistreham",
         },
-        Four: {
+        Three: {
           Title: "Employé de restauration (Travail saisonnier)",
           Date: "07/2019 - 09/2019",
           Website: "https://festyland.com/",
@@ -228,7 +325,7 @@ export default defineI18nConfig(() => ({
             "Préparation des commandes des clients (en cuisine). - Service des clients. - Nettoyage des locaux.",
           Location: "Festyland - 14652 Carpiquet",
         },
-        Five: {
+        Two: {
           Title: "Ouvrier manœuvre (Travail saisonnier)",
           Date: "06/2020 - 08/2020",
           Website:
@@ -237,7 +334,7 @@ export default defineI18nConfig(() => ({
             "Installation de tuyaux d'oxygène et d'air médical dans des hôpitaux. - Installation de prises murales d'oxygène et d'air médical dans des hôpitaux. - Installation de centrales d'oxygène et d'air médical dans des hôpitaux.",
           Location: "Mauger Gaz Médicaux - 14460 Colombelles",
         },
-        Six: {
+        One: {
           Title: "Ouvrier manœuvre (Travail saisonnier)",
           Date: "08/2018",
           Website:

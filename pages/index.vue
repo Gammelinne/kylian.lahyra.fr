@@ -1,4 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const $t = useI18n().t;
+useHead({
+  templateParams: {
+    page: $t("Route.Home"),
+  },
+})
+</script>
 
 <template>
   <div class="index-background">
@@ -7,7 +14,7 @@
     >
       <!-- Partie gauche -->
       <div
-        class="flex flex-col justify-center w-full md:w-6/12 text-center sm:text-left"
+        class="flex flex-col justify-center w-full md:w-5/12 text-center sm:text-left"
       >
         <h1 class="text-4xl mt-12 mb-4 font-bold">
           {{ $t("Home.Title.FirstName") }}
@@ -64,7 +71,7 @@
         </div>
       </div>
       <!-- Partie droite -->
-      <div class="flex flex-col justify-center">
+      <div class="flex flex-col justify-center md:w-7/12">
         <Card>
           <template #title>
             <h2 class="text-2xl font-bold text-center">

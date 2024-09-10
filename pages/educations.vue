@@ -110,6 +110,7 @@ onBeforeMount(() => {
   <Card v-else  class="mx-12 my-5" v-for="index in 3">
     <template #title>
       <h2 class="font-bold">{{ $t("Formation.Loading") }}</h2>
+      <Skeleton height="50px" />
     </template>
     <template #content>
       <div class="space-y-2">
