@@ -150,73 +150,75 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <h1 class="my-5 text-4xl font-bold text-center">
-    {{ $t("Experience.Title") }}
-  </h1>
-  <p class="text-center">
-    <Button disabled class="p-button-rounded mx-1" icon="pi pi-desktop" :severity="'primary'" />
-    {{ $t("Experience.ComputerScience") }}
-  </p>
-  <p class="text-center">
-    <Button disabled class="p-button-rounded mx-2" icon="pi pi-briefcase" :severity="'secondary'" />
-    {{ $t("Experience.SeasonalJobs") }}
-  </p>
-  <Timeline :value="experiences" v-if="experiences.length > 0" align="alternate" class="my-10">
-    <template #marker="slotProps">
-      <Button disabled class="p-button-rounded"
-        :icon="slotProps.item.isComputerScience ? 'pi pi-desktop' : 'pi pi-briefcase'"
-        :severity="slotProps.item.isComputerScience ? 'primary' : 'secondary'" />
-    </template>
-    <template #content="slotProps">
-      <Card class="mx-8">
-        <template #title>
-          <h2 class="text-xl font-bold">
-            {{ slotProps.item.title }}
-          </h2>
-        </template>
-        <template #content>
-          <img :src="slotProps.item.logo" alt="logo"
-            :class="'w-20 mx-3' + (slotProps.item.position === 'left' ? ' float-left' : ' float-right')" />
-          <p class="my-1 text-md font-bold">
-            <i class="pi pi-calendar" />
-            {{ slotProps.item.date }}
-          </p>
-          <p class="text-sm my-1">
-            <i class="pi pi-map-marker" />
-            {{ slotProps.item.location }}
-          </p>
-          <p class="text-sm my-1">
-            <i class="pi pi-link mr-1" />
-            <a :href="slotProps.item.website" target="_blank">{{
-              slotProps.item.website
-            }}</a>
-          </p>
-          <p class="my-5" v-if="
-            slotProps.item.description &&
-            slotProps.item.description.length > 0
-          " style="text-align: justify" v-for="description in slotProps.item.description.split(' -')"
-            :key="description">
-            - {{ description }}
-          </p>
-        </template>
-      </Card>
-    </template>
-  </Timeline>
-  <Card v-else class="mx-12 my-5" v-for="index in 3">
-    <template #title>
-      <h2 class="font-bold">{{ $t("Experience.Loading") }}</h2>
-      <Skeleton height="50px" />
-    </template>
-    <template #content>
-      <div class="space-y-2">
+  <ClientOnly>
+    <h1 class="my-5 text-4xl font-bold text-center">
+      {{ $t("Experience.Title") }}
+    </h1>
+    <p class="text-center">
+      <Button disabled class="p-button-rounded mx-1" icon="pi pi-desktop" :severity="'primary'" />
+      {{ $t("Experience.ComputerScience") }}
+    </p>
+    <p class="text-center">
+      <Button disabled class="p-button-rounded mx-2" icon="pi pi-briefcase" :severity="'secondary'" />
+      {{ $t("Experience.SeasonalJobs") }}
+    </p>
+    <Timeline :value="experiences" v-if="experiences.length > 0" align="alternate" class="my-10">
+      <template #marker="slotProps">
+        <Button disabled class="p-button-rounded"
+          :icon="slotProps.item.isComputerScience ? 'pi pi-desktop' : 'pi pi-briefcase'"
+          :severity="slotProps.item.isComputerScience ? 'primary' : 'secondary'" />
+      </template>
+      <template #content="slotProps">
+        <Card class="mx-8">
+          <template #title>
+            <h2 class="text-xl font-bold">
+              {{ slotProps.item.title }}
+            </h2>
+          </template>
+          <template #content>
+            <img :src="slotProps.item.logo" alt="logo"
+              :class="'w-20 mx-3' + (slotProps.item.position === 'left' ? ' float-left' : ' float-right')" />
+            <p class="my-1 text-md font-bold">
+              <i class="pi pi-calendar" />
+              {{ slotProps.item.date }}
+            </p>
+            <p class="text-sm my-1">
+              <i class="pi pi-map-marker" />
+              {{ slotProps.item.location }}
+            </p>
+            <p class="text-sm my-1">
+              <i class="pi pi-link mr-1" />
+              <a :href="slotProps.item.website" target="_blank">{{
+                slotProps.item.website
+              }}</a>
+            </p>
+            <p class="my-5" v-if="
+              slotProps.item.description &&
+              slotProps.item.description.length > 0
+            " style="text-align: justify" v-for="description in slotProps.item.description.split(' -')"
+              :key="description">
+              - {{ description }}
+            </p>
+          </template>
+        </Card>
+      </template>
+    </Timeline>
+    <Card v-else class="mx-12 my-5" v-for="index in 3">
+      <template #title>
+        <h2 class="font-bold">{{ $t("Experience.Loading") }}</h2>
         <Skeleton height="50px" />
-        <Skeleton height="20px" />
-        <Skeleton height="20px" />
-        <Skeleton height="20px" />
-      </div>
-    </template>
-    <template #footer>
-      <Skeleton height="30px" />
-    </template>
-  </Card>
+      </template>
+      <template #content>
+        <div class="space-y-2">
+          <Skeleton height="50px" />
+          <Skeleton height="20px" />
+          <Skeleton height="20px" />
+          <Skeleton height="20px" />
+        </div>
+      </template>
+      <template #footer>
+        <Skeleton height="30px" />
+      </template>
+    </Card>
+  </ClientOnly>
 </template>
