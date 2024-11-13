@@ -194,7 +194,7 @@ export default defineI18nConfig(() => ({
         },
         Resume: "CV",
         Portfolio: "Portfolio",
-        Description: `Etudiant en ingénierie informatique. Passionné par le développement web et mobile, je maitrise les technologies modernes telles que Vue.js, React.js, Node.js, Express.js, AdonisJs, MongoDB, MySQL, et bien d'autres.`,
+        Description: `Etudiant en ingénierie informatique, je suis passionné par le développement web et mobile, je maitrise les technologies modernes telles que Vue.js, React.js, Node.js, Express.js, AdonisJs, MongoDB, MySQL, et bien d'autres.`,
         GithubActivity: "Mon activité Github",
         Contributions: "Contributions",
         Github: "Github",
