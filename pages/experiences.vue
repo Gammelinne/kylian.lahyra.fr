@@ -9,6 +9,7 @@ import tdClicLogo from "../assets/images/logo/Tdclic.jpeg";
 import pavillonLogo from "../assets/images/logo/pavillon.jpeg";
 import festylandLogo from "../assets/images/logo/logo-festyland.png";
 import mgmLogo from "../assets/images/logo/mgm.png";
+import capLogo from "../assets/images/logo/cap.jpg";
 
 const $t = useI18n().t;
 const { locale } = useI18n();
@@ -36,6 +37,17 @@ const experiences = ref<
 
 const updateExperience = () => {
   experiences.value = [
+    // Capgemini internship 2025
+    {
+      title: $t("Experience.Ten.Title"),
+      location: $t("Experience.Ten.Location"),
+      website: $t("Experience.Ten.Website"),
+      date: $t("Experience.Ten.Date"),
+      description: $t("Experience.Ten.Description"),
+      isComputerScience: true,
+      position: "right",
+      logo: capLogo,
+    },
     //CrocoClub summer job 2024
     {
       title: $t("Experience.Nine.Title"),
@@ -138,7 +150,7 @@ const updateExperience = () => {
   ];
 };
 
-const isMobile = ref(false);
+const isMobile = ref(window.matchMedia("(max-width: 640px)").matches);
 
 const updateIsMobile = (event: MediaQueryListEvent) => {
   if (event.matches) {
@@ -157,6 +169,7 @@ watch(locale, () => {
 onBeforeMount(() => {
   updateExperience();
   updatePageTitle();
+
   window.matchMedia("(max-width: 640px)").addEventListener("change", updateIsMobile);
 });
 
@@ -263,6 +276,10 @@ onBeforeUnmount(() => {
               <img v-if="experience.logo" :src="experience.logo" alt="logo" class="w-24 mx-auto" />
               <h5>{{ experience.date }}</h5>
               <p>{{ experience.location }}</p>
+              <p>
+                <i class="pi pi-link mr-1" />
+                <a :href="experience.website" target="_blank">{{ experience.website }}</a>
+              </p>
               <p class="my-5" v-if="
                 experience.description &&
                 experience.description.length > 0
@@ -271,10 +288,6 @@ onBeforeUnmount(() => {
                 - {{ description }}
               </p>
             </div>
-          </template>
-          <template #footer>
-            <Button severity="success" size="small" as="a" class="mt-2" :label="$t('Experience.More')"
-              :href="experience.website" target="_blank" icon="pi pi-link" />
           </template>
         </Card>
       </div>

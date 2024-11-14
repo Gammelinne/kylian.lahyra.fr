@@ -96,6 +96,14 @@ export default defineI18nConfig(() => ({
         Website: "Learn more",
         ComputerScience : "Related to computer science",
         SeasonalJobs : "Seasonal work",
+        Ten: {
+          Title: "Software Developer",
+          Date: "Since 11/2024",
+          Website: "https://www.capgemini.com/fr-fr/",
+          Description:
+            "Software application development - Software application maintenance - Unit tests - Writing technical documentation - Project management",
+          Location: "Capgemini (altran) - 50440 Beaumont-Hague",
+        },
         Nine: {
           Title: "Beach Club Animator (Seasonal Work)",
           Date: "07/2024 - 08/2024",
@@ -270,6 +278,14 @@ export default defineI18nConfig(() => ({
         Website: "En savoir plus",
         ComputerScience : "En lien avec l'informatique",
         SeasonalJobs : "Travail saisonnier",
+        Ten: {
+          Title: "Développeur logiciel",
+          Date: "Depuis 11/2024",
+          Website: "https://www.capgemini.com/fr-fr/",
+          Description:
+            "Développement d'applications logicielles - Maintenance d'applications logicielles - Tests unitaires - Rédaction de documentation technique - Management de projet",
+          Location: "Capgemini (altran) - 50440 Beaumont-Hague",
+        },
         Nine: {
           Title: "Animateur club de plage (Travail saisonnier)",
           Date: "07/2024 - 08/2024",
