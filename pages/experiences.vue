@@ -150,7 +150,7 @@ const updateExperience = () => {
   ];
 };
 
-const isMobile = ref(window.matchMedia("(max-width: 640px)").matches);
+const isMobile = ref(window.matchMedia("(max-width: 500px)").matches);
 
 const updateIsMobile = (event: MediaQueryListEvent) => {
   if (event.matches) {
@@ -170,11 +170,11 @@ onBeforeMount(() => {
   updateExperience();
   updatePageTitle();
 
-  window.matchMedia("(max-width: 640px)").addEventListener("change", updateIsMobile);
+  window.matchMedia("(max-width: 500px)").addEventListener("change", updateIsMobile);
 });
 
 onBeforeUnmount(() => {
-  window.matchMedia("(max-width: 640px)").removeEventListener("change", updateIsMobile);
+  window.matchMedia("(max-width: 500px)").removeEventListener("change", updateIsMobile);
 });
 </script>
 
