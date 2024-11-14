@@ -9,6 +9,7 @@ export default defineI18nConfig(() => ({
           FirstName: "Kylian",
           LastName: "Renault",
         },
+        Job: "Associate Digital Technician apprentice at Capgemini",
         Infos: {
           Title: "My informations ",
           Name: "Kylian Renault",
@@ -182,6 +183,7 @@ export default defineI18nConfig(() => ({
           FirstName: "Kylian",
           LastName: "Renault",
         },
+        Job: "Associate Digital Technician en alternance chez Capgemini",
         Infos: {
           Title: "Mes informations",
           Name: "Kylian Renault",

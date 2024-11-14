@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
+    "@nuxtjs/robots",
   ],
 
   i18n: {

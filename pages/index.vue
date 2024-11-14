@@ -13,10 +13,15 @@ useHead({
       <div class="flex flex-col md:flex-row min-h-screen md:mt-[-4.5rem] mx-8 space-x-3">
         <!-- Partie gauche -->
         <div class="flex flex-col justify-center w-full md:w-5/12 text-center sm:text-left">
-          <h1 class="text-4xl mt-12 mb-4 font-bold">
+          <h1 class="text-4xl mt-6 mb-2 font-bold">
             {{ $t("Home.Title.FirstName") }}
             <span class="text-purple-500">{{ $t("Home.Title.LastName") }}</span>
           </h1>
+          <div>
+            <h2 class="text-2xl mb-4 font-bold">
+              {{ $t("Home.Job") }}
+            </h2>
+          </div>
           <div class="flex space-x-2 mb-5">
             <h2 class="text-xl">
               {{ $t("Home.Description") }}
@@ -55,7 +60,7 @@ useHead({
   </ClientOnly>
 </template>
 
-<style>
+<style scoped>
 /* Background Animation */
 @-webkit-keyframes bg-scrolling-reverse {
   100% {

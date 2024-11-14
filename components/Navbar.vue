@@ -29,12 +29,7 @@ watch(locale, () => {
     <!-- Start template (logo and route) -->
     <template #start>
       <!-- Logo -->
-      <Image
-        class="mx-2"
-        :src="logo"
-        alt="logo"
-        width="50"
-      />
+      <Image class="mx-2" :src="logo" alt="logo" width="50" />
     </template>
     <template #end>
       <!-- Theme and language buttons -->
