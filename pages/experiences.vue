@@ -149,15 +149,11 @@ const updateExperience = () => {
     },
   ];
 };
+const innerMinWidth = ref<number>(768);
+const isMobile = ref<boolean>(false);
 
-const isMobile = ref(window.matchMedia("(max-width: 500px)").matches);
-
-const updateIsMobile = (event: MediaQueryListEvent) => {
-  if (event.matches) {
-    isMobile.value = true;
-  } else {
-    isMobile.value = false;
-  }
+const updateIsMobile = () => {
+  isMobile.value = window.innerWidth <= innerMinWidth.value ? true : false;
 };
 
 
@@ -169,12 +165,13 @@ watch(locale, () => {
 onBeforeMount(() => {
   updateExperience();
   updatePageTitle();
-
-  window.matchMedia("(max-width: 500px)").addEventListener("change", updateIsMobile);
+  updateIsMobile();
+  //resize event
+  window.addEventListener('resize', () => { updateIsMobile(); });
 });
 
 onBeforeUnmount(() => {
-  window.matchMedia("(max-width: 500px)").removeEventListener("change", updateIsMobile);
+  window.removeEventListener('resize', () => { updateIsMobile(); });
 });
 </script>
 
@@ -220,7 +217,7 @@ onBeforeUnmount(() => {
                 <i class="pi pi-link mr-1" />
                 <a :href="slotProps.item.website" target="_blank">{{
                   slotProps.item.website
-                  }}</a>
+                }}</a>
               </p>
               <p class="my-5" v-if="
                 slotProps.item.description &&
