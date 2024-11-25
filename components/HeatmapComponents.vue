@@ -1,12 +1,42 @@
 <script setup lang="ts">
-/* Variables */
+import { onBeforeMount, ref } from "vue";
 
+// Interfaces pour les données de GitHub
+interface ContributionDay {
+  contributionCount: number;
+  date: string;
+}
+
+interface Week {
+  contributionDays: ContributionDay[];
+}
+
+interface ContributionCalendar {
+  totalContributions: number;
+  weeks: Week[];
+}
+
+interface ContributionsCollection {
+  contributionCalendar: ContributionCalendar;
+}
+
+interface User {
+  name: string | null;
+  contributionsCollection: ContributionsCollection;
+}
+
+interface GithubData {
+  data: {
+    user: User;
+  };
+}
+
+// Variables
 const mode = useColorMode();
 const config = useRuntimeConfig();
 const heatMapData = ref<{ date: string; count: number }[]>([]);
 
-// Github data create a class
-const githubData = ref({
+const githubData = ref<GithubData>({
   data: {
     user: {
       name: null,
@@ -20,8 +50,8 @@ const githubData = ref({
   },
 });
 
-/* Fonction */
-async function getContributions() {
+// Fonction pour obtenir les contributions
+async function getContributions(): Promise<GithubData> {
   const headers = {
     Authorization: `bearer ${config.public.githubToken}`,
   };
@@ -50,29 +80,24 @@ async function getContributions() {
     headers: headers,
   });
 
-  const data = await response.json();
+  const data: GithubData = await response.json();
   return data;
 }
 
-const extractHeatMapData = (data: {
-  data: {
-    user: {
-      contributionsCollection: { contributionCalendar: { weeks: Object[] } };
-    };
-  };
-}) => {
-  const weeks =
-    data?.data?.user?.contributionsCollection?.contributionCalendar?.weeks;
+// Fonction pour extraire les données de la heatmap
+const extractHeatMapData = (data: GithubData): { date: string; count: number }[] => {
+  const weeks = data.data.user.contributionsCollection.contributionCalendar.weeks;
   if (!weeks) return [];
 
-  return weeks.flatMap((week: any) =>
-    week.contributionDays.map((day: any) => ({
+  return weeks.flatMap((week: Week) =>
+    week.contributionDays.map((day: ContributionDay) => ({
       date: day.date,
       count: day.contributionCount,
-    })),
+    }))
   );
 };
 
+// Initialisation
 onBeforeMount(async () => {
   const data = await getContributions();
   githubData.value = data;

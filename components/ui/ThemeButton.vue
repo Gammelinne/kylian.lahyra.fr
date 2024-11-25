@@ -4,9 +4,11 @@ import { onMounted } from "vue";
 const mode = useColorMode();
 const toggleTheme = () => {
   document.body.classList.toggle("dark-mode");
-  mode.preference === "dark"
-    ? (mode.preference = "light")
-    : (mode.preference = "dark");
+  if (mode.preference === "dark") {
+    mode.preference = "light";
+  } else {
+    mode.preference = "dark";
+  }
   localStorage.setItem("theme", mode.preference);
 };
 
