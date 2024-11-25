@@ -203,8 +203,8 @@ onBeforeUnmount(() => {
         {{ $t("Experience.SeasonalJobs") }}
       </p>
       <Timeline
-        :value="experiences"
         v-if="experiences.length > 0"
+        :value="experiences"
         align="alternate"
         class="my-10"
       >
@@ -255,14 +255,14 @@ onBeforeUnmount(() => {
                 }}</a>
               </p>
               <p
-                class="my-5"
+                v-for="description in slotProps.item.description.split(' -')"
                 v-if="
                   slotProps.item.description &&
                   slotProps.item.description.length > 0
                 "
-                style="text-align: justify"
-                v-for="description in slotProps.item.description.split(' -')"
                 :key="description"
+                class="my-5"
+                style="text-align: justify"
               >
                 - {{ description }}
               </p>
@@ -270,7 +270,7 @@ onBeforeUnmount(() => {
           </Card>
         </template>
       </Timeline>
-      <Card v-else class="mx-12 my-5" v-for="index in 3">
+      <Card v-for="index in 3" v-else class="mx-12 my-5">
         <template #title>
           <h2 class="font-bold">{{ $t("Experience.Loading") }}</h2>
           <Skeleton height="50px" />
@@ -344,13 +344,13 @@ onBeforeUnmount(() => {
                 }}</a>
               </p>
               <p
-                class="my-5"
+                v-for="description in experience.description.split(' -')"
                 v-if="
                   experience.description && experience.description.length > 0
                 "
-                style="text-align: justify"
-                v-for="description in experience.description.split(' -')"
                 :key="description"
+                class="my-5"
+                style="text-align: justify"
               >
                 - {{ description }}
               </p>

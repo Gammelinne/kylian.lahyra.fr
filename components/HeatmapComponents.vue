@@ -4,6 +4,8 @@
 const mode = useColorMode();
 const config = useRuntimeConfig();
 const heatMapData = ref<{ date: string; count: number }[]>([]);
+
+// Github data create a class
 const githubData = ref({
   data: {
     user: {
@@ -52,7 +54,13 @@ async function getContributions() {
   return data;
 }
 
-const extractHeatMapData = (data: any) => {
+const extractHeatMapData = (data: {
+  data: {
+    user: {
+      contributionsCollection: { contributionCalendar: { weeks: Object[] } };
+    };
+  };
+}) => {
   const weeks =
     data?.data?.user?.contributionsCollection?.contributionCalendar?.weeks;
   if (!weeks) return [];
@@ -77,7 +85,7 @@ onBeforeMount(async () => {
     <ClientOnly>
       <CalendarMap
         :values="heatMapData"
-        :endDate="new Date()"
+        :end-date="new Date()"
         :round="3"
         :range-color="
           mode.preference === 'dark'

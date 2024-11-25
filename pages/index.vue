@@ -85,9 +85,9 @@ useHead({
               </h2>
             </template>
             <template #content>
-              <Heatmap />
+              <HeatmapComponents />
               <hr class="my-2" />
-              <Information />
+              <InformationComponents />
             </template>
           </Card>
         </div>

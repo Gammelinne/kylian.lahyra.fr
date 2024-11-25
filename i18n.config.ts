@@ -1,4 +1,3 @@
-const Email = "kylian.renault@viacesi.fr";
 export default defineI18nConfig(() => ({
   legacy: false,
   locale: "fr",

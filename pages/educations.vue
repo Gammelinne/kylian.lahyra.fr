@@ -70,8 +70,8 @@ onBeforeMount(() => {
       {{ $t("Formation.Title") }}
     </h1>
     <Card
-      v-if="formations.length > 0"
       v-for="formation in formations"
+      v-if="formations.length > 0"
       class="mx-12 my-5"
     >
       <template #title>
@@ -88,9 +88,9 @@ onBeforeMount(() => {
           <h5>{{ formation.date }}</h5>
           <p>{{ formation.location }}</p>
           <Chip
-            class="mr-1 mt-1"
             v-for="description in formation.description.split(',')"
             :key="description"
+            class="mr-1 mt-1"
             :label="description"
           />
         </div>
@@ -108,7 +108,7 @@ onBeforeMount(() => {
         />
       </template>
     </Card>
-    <Card v-else class="mx-12 my-5" v-for="index in 3">
+    <Card v-for="index in 3" v-else class="mx-12 my-5">
       <template #title>
         <h2 class="font-bold">{{ $t("Formation.Loading") }}</h2>
         <Skeleton height="50px" />
