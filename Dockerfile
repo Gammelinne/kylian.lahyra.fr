@@ -1,4 +1,4 @@
-FROM node:lts-alpine3.20 as base
+FROM node:current-alpine3.20 as base
 
 # Set environment variables
 ARG PORT=3000
