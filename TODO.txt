@@ -1,2 +1,0 @@
-- fix : icon theme value depend of default theme (need to click 2 time when night mode first)
-- fix : route not work the first time and redirect to home view
