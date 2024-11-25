@@ -1,5 +1,5 @@
 <script lang="ts"></script>
 
 <template>
-    <p>bob</p>
+  <p>bob</p>
 </template>

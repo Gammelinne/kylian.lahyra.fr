@@ -85,15 +85,18 @@ async function getContributions(): Promise<GithubData> {
 }
 
 // Fonction pour extraire les données de la heatmap
-const extractHeatMapData = (data: GithubData): { date: string; count: number }[] => {
-  const weeks = data.data.user.contributionsCollection.contributionCalendar.weeks;
+const extractHeatMapData = (
+  data: GithubData,
+): { date: string; count: number }[] => {
+  const weeks =
+    data.data.user.contributionsCollection.contributionCalendar.weeks;
   if (!weeks) return [];
 
   return weeks.flatMap((week: Week) =>
     week.contributionDays.map((day: ContributionDay) => ({
       date: day.date,
       count: day.contributionCount,
-    }))
+    })),
   );
 };
 

@@ -70,24 +70,43 @@ onBeforeMount(() => {
       {{ $t("Formation.Title") }}
     </h1>
     <div v-if="formations.length > 0">
-      <Card v-for="formation in formations" :key="formation.id" class="mx-12 my-5">
+      <Card
+        v-for="formation in formations"
+        :key="formation.id"
+        class="mx-12 my-5"
+      >
         <template #title>
           <h2 class="font-bold">{{ formation.title }}</h2>
         </template>
         <template #content>
           <div class="space-y-2">
-            <img v-if="formation.logo" :src="formation.logo" alt="logo" class="w-24">
+            <img
+              v-if="formation.logo"
+              :src="formation.logo"
+              alt="logo"
+              class="w-24"
+            />
             <h5>{{ formation.date }}</h5>
             <p>{{ formation.location }}</p>
             <Chip
-v-for="description in formation.description.split(',')" :key="description" class="mr-1 mt-1"
-              :label="description" />
+              v-for="description in formation.description.split(',')"
+              :key="description"
+              class="mr-1 mt-1"
+              :label="description"
+            />
           </div>
         </template>
         <template #footer>
           <Button
-severity="success" size="small" as="a" class="mt-2" :label="$t('Formation.More')"
-            :href="formation.website" target="_blank" icon="pi pi-link" />
+            severity="success"
+            size="small"
+            as="a"
+            class="mt-2"
+            :label="$t('Formation.More')"
+            :href="formation.website"
+            target="_blank"
+            icon="pi pi-link"
+          />
         </template>
       </Card>
     </div>

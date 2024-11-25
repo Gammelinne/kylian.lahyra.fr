@@ -185,22 +185,38 @@ onBeforeUnmount(() => {
         {{ $t("Experience.Title") }}
       </h1>
       <p class="text-center">
-        <Button disabled class="p-button-rounded mx-1" icon="pi pi-desktop" :severity="'primary'" />
+        <Button
+          disabled
+          class="p-button-rounded mx-1"
+          icon="pi pi-desktop"
+          :severity="'primary'"
+        />
         {{ $t("Experience.ComputerScience") }}
       </p>
       <p class="text-center">
-        <Button disabled class="p-button-rounded mx-2" icon="pi pi-briefcase" :severity="'secondary'" />
+        <Button
+          disabled
+          class="p-button-rounded mx-2"
+          icon="pi pi-briefcase"
+          :severity="'secondary'"
+        />
         {{ $t("Experience.SeasonalJobs") }}
       </p>
       <div v-if="experiences.length > 0">
         <Timeline :value="experiences" align="alternate" class="my-10">
           <template #marker="slotProps">
             <Button
-disabled class="p-button-rounded" :icon="slotProps.item.isComputerScience
-              ? 'pi pi-desktop'
-              : 'pi pi-briefcase'
-              " :severity="slotProps.item.isComputerScience ? 'primary' : 'secondary'
-                " />
+              disabled
+              class="p-button-rounded"
+              :icon="
+                slotProps.item.isComputerScience
+                  ? 'pi pi-desktop'
+                  : 'pi pi-briefcase'
+              "
+              :severity="
+                slotProps.item.isComputerScience ? 'primary' : 'secondary'
+              "
+            />
           </template>
           <template #content="slotProps">
             <Card class="mx-8">
@@ -211,11 +227,15 @@ disabled class="p-button-rounded" :icon="slotProps.item.isComputerScience
               </template>
               <template #content>
                 <img
-:src="slotProps.item.logo" alt="logo" :class="'w-20 mx-3' +
-                  (slotProps.item.position === 'left'
-                    ? ' float-left'
-                    : ' float-right')
-                  ">
+                  :src="slotProps.item.logo"
+                  alt="logo"
+                  :class="
+                    'w-20 mx-3' +
+                    (slotProps.item.position === 'left'
+                      ? ' float-left'
+                      : ' float-right')
+                  "
+                />
                 <p class="my-1 text-md font-bold">
                   <i class="pi pi-calendar" />
                   {{ slotProps.item.date }}
@@ -231,13 +251,19 @@ disabled class="p-button-rounded" :icon="slotProps.item.isComputerScience
                   }}</a>
                 </p>
                 <div
-v-if="
-                  slotProps.item.description &&
-                  slotProps.item.description.length > 0
-                ">
+                  v-if="
+                    slotProps.item.description &&
+                    slotProps.item.description.length > 0
+                  "
+                >
                   <p
-v-for="description in slotProps.item.description.split(' -')" :key="description" class="my-5"
-                    style="text-align: justify">
+                    v-for="description in slotProps.item.description.split(
+                      ' -',
+                    )"
+                    :key="description"
+                    class="my-5"
+                    style="text-align: justify"
+                  >
                     - {{ description }}
                   </p>
                 </div>
@@ -271,42 +297,71 @@ v-for="description in slotProps.item.description.split(' -')" :key="description"
         {{ $t("Experience.Title") }}
       </h1>
       <p>
-        <Button disabled class="p-button-rounded mx-1" icon="pi pi-desktop" :severity="'primary'" />
+        <Button
+          disabled
+          class="p-button-rounded mx-1"
+          icon="pi pi-desktop"
+          :severity="'primary'"
+        />
         {{ $t("Experience.ComputerScience") }}
       </p>
       <p>
-        <Button disabled class="p-button-rounded mx-2" icon="pi pi-briefcase" :severity="'secondary'" />
+        <Button
+          disabled
+          class="p-button-rounded mx-2"
+          icon="pi pi-briefcase"
+          :severity="'secondary'"
+        />
         {{ $t("Experience.SeasonalJobs") }}
       </p>
       <div class="flex flex-col space-y-5">
-        <Card v-for="experience in experiences" :key="experience.title" class="mx-12 my-5">
+        <Card
+          v-for="experience in experiences"
+          :key="experience.title"
+          class="mx-12 my-5"
+        >
           <template #title>
             <h2 class="font-bold">{{ experience.title }}</h2>
           </template>
           <template #content>
             <div class="space-y-2">
               <Button
-disabled class="p-button-rounded" :icon="experience.isComputerScience
-                ? 'pi pi-desktop'
-                : 'pi pi-briefcase'
-                " :severity="experience.isComputerScience ? 'primary' : 'secondary'
-                  " />
-              <img v-if="experience.logo" :src="experience.logo" alt="logo" class="w-24 mx-auto">
+                disabled
+                class="p-button-rounded"
+                :icon="
+                  experience.isComputerScience
+                    ? 'pi pi-desktop'
+                    : 'pi pi-briefcase'
+                "
+                :severity="
+                  experience.isComputerScience ? 'primary' : 'secondary'
+                "
+              />
+              <img
+                v-if="experience.logo"
+                :src="experience.logo"
+                alt="logo"
+                class="w-24 mx-auto"
+              />
               <h5>{{ experience.date }}</h5>
               <p>{{ experience.location }}</p>
               <p>
                 <i class="pi pi-link mr-1" />
                 <a :href="experience.website" target="_blank">{{
                   experience.website
-                  }}</a>
+                }}</a>
               </p>
               <div
-v-if="
-                experience.description && experience.description.length > 0
-              ">
+                v-if="
+                  experience.description && experience.description.length > 0
+                "
+              >
                 <p
-v-for="description in experience.description.split(' -')" :key="description" class="my-5"
-                  style="text-align: justify">
+                  v-for="description in experience.description.split(' -')"
+                  :key="description"
+                  class="my-5"
+                  style="text-align: justify"
+                >
                   - {{ description }}
                 </p>
               </div>
