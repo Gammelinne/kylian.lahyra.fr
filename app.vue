@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="dark">
     <Navbar />
-    <NuxtPage class="min-h-screen"/>
+    <NuxtPage class="min-h-screen" />
   </div>
 </template>
 

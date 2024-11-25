@@ -94,8 +94,8 @@ export default defineI18nConfig(() => ({
       Experience: {
         Title: "Professional Experiences",
         Website: "Learn more",
-        ComputerScience : "Related to computer science",
-        SeasonalJobs : "Seasonal work",
+        ComputerScience: "Related to computer science",
+        SeasonalJobs: "Seasonal work",
         Ten: {
           Title: "Software Developer",
           Date: "Since 11/2024",
@@ -181,9 +181,6 @@ export default defineI18nConfig(() => ({
         },
       },
     },
-
-
-
 
     fr: {
       Home: {
@@ -276,8 +273,8 @@ export default defineI18nConfig(() => ({
       Experience: {
         Title: "Experiences professionnelles",
         Website: "En savoir plus",
-        ComputerScience : "En lien avec l'informatique",
-        SeasonalJobs : "Travail saisonnier",
+        ComputerScience: "En lien avec l'informatique",
+        SeasonalJobs: "Travail saisonnier",
         Ten: {
           Title: "Développeur logiciel",
           Date: "Depuis 11/2024",

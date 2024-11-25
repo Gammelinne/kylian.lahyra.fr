@@ -2,7 +2,7 @@
 /* Variables */
 
 const mode = useColorMode();
-const config = useRuntimeConfig()
+const config = useRuntimeConfig();
 const heatMapData = ref<{ date: string; count: number }[]>([]);
 const githubData = ref({
   data: {
@@ -61,7 +61,7 @@ const extractHeatMapData = (data: any) => {
     week.contributionDays.map((day: any) => ({
       date: day.date,
       count: day.contributionCount,
-    }))
+    })),
   );
 };
 
@@ -75,10 +75,17 @@ onBeforeMount(async () => {
 <template>
   <div v-if="heatMapData.length > 0">
     <ClientOnly>
-      <CalendarMap :values="heatMapData" :endDate="new Date()" :round="3" :range-color="mode.preference === 'dark'
-        ? ['#0d1117', '#0d1117', '#40c463', '#30a14e', '#216e39']
-        : ['#ebedf0', '#ebedf0', '#40c463', '#30a14e', '#216e39']
-        " :max="10" />
+      <CalendarMap
+        :values="heatMapData"
+        :endDate="new Date()"
+        :round="3"
+        :range-color="
+          mode.preference === 'dark'
+            ? ['#0d1117', '#0d1117', '#40c463', '#30a14e', '#216e39']
+            : ['#ebedf0', '#ebedf0', '#40c463', '#30a14e', '#216e39']
+        "
+        :max="10"
+      />
     </ClientOnly>
     <h2 class="text-lg font-bold text-center">
       {{

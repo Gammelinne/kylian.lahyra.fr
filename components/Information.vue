@@ -23,8 +23,16 @@ const infoColumns: Ref<{ text: string; icon: string }[][]> = ref([
     {{ $t("Home.Infos.Title") }}
   </h2>
   <div class="flex flex-col md:flex-row">
-    <div v-for="(info, index) in infoColumns" :key="index" class="flex flex-col w-1/3 w-full">
-      <p v-for="(item, idx) in info" :key="idx" class="text-sm text-center my-1">
+    <div
+      v-for="(info, index) in infoColumns"
+      :key="index"
+      class="flex flex-col w-1/3 w-full"
+    >
+      <p
+        v-for="(item, idx) in info"
+        :key="idx"
+        class="text-sm text-center my-1"
+      >
         <i :class="`pi pi-${item.icon}`" />
         {{ item.text !== email ? $t(item.text) : item.text }}
       </p>

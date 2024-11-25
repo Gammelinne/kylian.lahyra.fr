@@ -1,5 +1,3 @@
-
-
 export const getRoutes = ($t: any, router: any) => [
   {
     label: $t("Route.Home"),
@@ -13,14 +11,14 @@ export const getRoutes = ($t: any, router: any) => [
     icon: "pi pi-fw pi-graduation-cap",
     command: () => {
       router.push("/educations");
-    }
+    },
   },
   {
     label: $t("Route.Experience"),
     icon: "pi pi-fw pi-briefcase",
     command: () => {
       router.push("/experiences");
-    }
+    },
   },
   {
     label: $t("Route.Projects.Title"),

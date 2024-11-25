@@ -156,7 +156,6 @@ const updateIsMobile = () => {
   isMobile.value = window.innerWidth <= innerMinWidth.value ? true : false;
 };
 
-
 watch(locale, () => {
   updateExperience();
   updatePageTitle();
@@ -167,11 +166,15 @@ onBeforeMount(() => {
   updatePageTitle();
   updateIsMobile();
   //resize event
-  window.addEventListener('resize', () => { updateIsMobile(); });
+  window.addEventListener("resize", () => {
+    updateIsMobile();
+  });
 });
 
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', () => { updateIsMobile(); });
+  window.removeEventListener("resize", () => {
+    updateIsMobile();
+  });
 });
 </script>
 
@@ -182,18 +185,42 @@ onBeforeUnmount(() => {
         {{ $t("Experience.Title") }}
       </h1>
       <p class="text-center">
-        <Button disabled class="p-button-rounded mx-1" icon="pi pi-desktop" :severity="'primary'" />
+        <Button
+          disabled
+          class="p-button-rounded mx-1"
+          icon="pi pi-desktop"
+          :severity="'primary'"
+        />
         {{ $t("Experience.ComputerScience") }}
       </p>
       <p class="text-center">
-        <Button disabled class="p-button-rounded mx-2" icon="pi pi-briefcase" :severity="'secondary'" />
+        <Button
+          disabled
+          class="p-button-rounded mx-2"
+          icon="pi pi-briefcase"
+          :severity="'secondary'"
+        />
         {{ $t("Experience.SeasonalJobs") }}
       </p>
-      <Timeline :value="experiences" v-if="experiences.length > 0" align="alternate" class="my-10">
+      <Timeline
+        :value="experiences"
+        v-if="experiences.length > 0"
+        align="alternate"
+        class="my-10"
+      >
         <template #marker="slotProps">
-          <Button disabled class="p-button-rounded"
-            :icon="slotProps.item.isComputerScience ? 'pi pi-desktop' : 'pi pi-briefcase'"
-            :severity="slotProps.item.isComputerScience ? 'primary' : 'secondary'" />
+          <Button
+            disabled
+            class="p-button-rounded"
+            :icon="
+              slotProps.item.isComputerScience
+                ? 'pi pi-desktop'
+                : 'pi pi-briefcase'
+            "
+            :severity="
+              slotProps.item.isComputerScience ? 'primary' : 'secondary'
+            "
+          />
         </template>
         <template #content="slotProps">
           <Card class="mx-8">
@@ -203,8 +230,16 @@ onBeforeUnmount(() => {
               </h2>
             </template>
             <template #content>
-              <img :src="slotProps.item.logo" alt="logo"
-                :class="'w-20 mx-3' + (slotProps.item.position === 'left' ? ' float-left' : ' float-right')" />
+              <img
+                :src="slotProps.item.logo"
+                alt="logo"
+                :class="
+                  'w-20 mx-3' +
+                  (slotProps.item.position === 'left'
+                    ? ' float-left'
+                    : ' float-right')
+                "
+              />
               <p class="my-1 text-md font-bold">
                 <i class="pi pi-calendar" />
                 {{ slotProps.item.date }}
@@ -219,11 +254,16 @@ onBeforeUnmount(() => {
                   slotProps.item.website
                 }}</a>
               </p>
-              <p class="my-5" v-if="
-                slotProps.item.description &&
-                slotProps.item.description.length > 0
-              " style="text-align: justify" v-for="description in slotProps.item.description.split(' -')"
-                :key="description">
+              <p
+                class="my-5"
+                v-if="
+                  slotProps.item.description &&
+                  slotProps.item.description.length > 0
+                "
+                style="text-align: justify"
+                v-for="description in slotProps.item.description.split(' -')"
+                :key="description"
+              >
                 - {{ description }}
               </p>
             </template>
@@ -253,11 +293,21 @@ onBeforeUnmount(() => {
         {{ $t("Experience.Title") }}
       </h1>
       <p>
-        <Button disabled class="p-button-rounded mx-1" icon="pi pi-desktop" :severity="'primary'" />
+        <Button
+          disabled
+          class="p-button-rounded mx-1"
+          icon="pi pi-desktop"
+          :severity="'primary'"
+        />
         {{ $t("Experience.ComputerScience") }}
       </p>
       <p>
-        <Button disabled class="p-button-rounded mx-2" icon="pi pi-briefcase" :severity="'secondary'" />
+        <Button
+          disabled
+          class="p-button-rounded mx-2"
+          icon="pi pi-briefcase"
+          :severity="'secondary'"
+        />
         {{ $t("Experience.SeasonalJobs") }}
       </p>
       <div class="flex flex-col space-y-5">
@@ -267,21 +317,41 @@ onBeforeUnmount(() => {
           </template>
           <template #content>
             <div class="space-y-2">
-              <Button disabled class="p-button-rounded"
-                :icon="experience.isComputerScience ? 'pi pi-desktop' : 'pi pi-briefcase'"
-                :severity="experience.isComputerScience ? 'primary' : 'secondary'" />
-              <img v-if="experience.logo" :src="experience.logo" alt="logo" class="w-24 mx-auto" />
+              <Button
+                disabled
+                class="p-button-rounded"
+                :icon="
+                  experience.isComputerScience
+                    ? 'pi pi-desktop'
+                    : 'pi pi-briefcase'
+                "
+                :severity="
+                  experience.isComputerScience ? 'primary' : 'secondary'
+                "
+              />
+              <img
+                v-if="experience.logo"
+                :src="experience.logo"
+                alt="logo"
+                class="w-24 mx-auto"
+              />
               <h5>{{ experience.date }}</h5>
               <p>{{ experience.location }}</p>
               <p>
                 <i class="pi pi-link mr-1" />
-                <a :href="experience.website" target="_blank">{{ experience.website }}</a>
+                <a :href="experience.website" target="_blank">{{
+                  experience.website
+                }}</a>
               </p>
-              <p class="my-5" v-if="
-                experience.description &&
-                experience.description.length > 0
-              " style="text-align: justify" v-for="description in experience.description.split(' -')"
-                :key="description">
+              <p
+                class="my-5"
+                v-if="
+                  experience.description && experience.description.length > 0
+                "
+                style="text-align: justify"
+                v-for="description in experience.description.split(' -')"
+                :key="description"
+              >
                 - {{ description }}
               </p>
             </div>
