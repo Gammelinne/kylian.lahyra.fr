@@ -20,5 +20,5 @@ RUN npm prune
 
 # Expose the host and port
 ENV HOST 0.0.0.0
-EXPOSE 3000
+EXPOSE $PORT
 ENTRYPOINT ["node", ".output/server/index.mjs"]
