@@ -1,4 +1,4 @@
-FROM node:20.15.1-alpine3.20 as base
+FROM node:current-alpine3.20 as base
 
 # Set environment variables
 ARG PORT=3000
@@ -20,5 +20,5 @@ RUN npm prune
 
 # Expose the host and port
 ENV HOST 0.0.0.0
-EXPOSE 3000
+EXPOSE $PORT
 ENTRYPOINT ["node", ".output/server/index.mjs"]

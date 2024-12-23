@@ -7,9 +7,13 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
   },
   "dependencies": {
+    "@nuxt/eslint": "^0.7.1",
     "@nuxt/fonts": "^0.7.0",
     "@nuxtjs/i18n": "^8.3.1",
     "@nuxtjs/robots": "^4.1.11",
@@ -26,6 +30,9 @@
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.4.1",
-    "@primevue/nuxt-module": "^v4.0.0-beta.4"
+    "@primevue/nuxt-module": "^v4.0.0-beta.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3"
   }
 }

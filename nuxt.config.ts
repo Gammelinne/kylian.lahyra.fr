@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "@nuxtjs/robots",
+    "@nuxt/eslint",
   ],
 
   i18n: {
@@ -32,7 +33,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      titleTemplate: '%page - Kylian Renault',
+      titleTemplate: "%page - Kylian Renault",
       noscript: [{ innerHTML: "This website requires JavaScript." }],
       meta: [
         {
@@ -45,5 +46,4 @@ export default defineNuxtConfig({
       ],
     },
   },
-
 });

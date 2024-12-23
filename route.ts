@@ -1,6 +1,22 @@
+import type { LocaleMessage, RemoveIndexSignature } from "@intlify/core-base";
+import type {
+  ComposerTranslation,
+  VueMessageType,
+  LocaleMessageValue,
+} from "vue-i18n";
+import type { Router } from "vue-router";
 
-
-export const getRoutes = ($t: any, router: any) => [
+export const getRoutes = (
+  $t: ComposerTranslation<
+    { [x: string]: LocaleMessage<VueMessageType> },
+    string,
+    RemoveIndexSignature<{ [x: string]: LocaleMessageValue<VueMessageType> }>,
+    never,
+    string,
+    string
+  >,
+  router: string[] | Router,
+) => [
   {
     label: $t("Route.Home"),
     icon: "pi pi-fw pi-home",
@@ -13,14 +29,14 @@ export const getRoutes = ($t: any, router: any) => [
     icon: "pi pi-fw pi-graduation-cap",
     command: () => {
       router.push("/educations");
-    }
+    },
   },
   {
     label: $t("Route.Experience"),
     icon: "pi pi-fw pi-briefcase",
     command: () => {
       router.push("/experiences");
-    }
+    },
   },
   {
     label: $t("Route.Projects.Title"),
