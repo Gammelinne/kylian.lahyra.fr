@@ -53,7 +53,7 @@ const githubData = ref<GithubData>({
 // Fonction pour obtenir les contributions
 async function getContributions(): Promise<GithubData> {
   const headers = {
-    Authorization: `bearer ${config.public.githubToken}`,
+    Authorization: `bearer ${config.app.githubToken}`,
   };
   const body = {
     query: `query {
