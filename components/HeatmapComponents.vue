@@ -33,7 +33,6 @@ interface GithubData {
 
 // Variables
 const mode = useColorMode();
-const config = useRuntimeConfig();
 const heatMapData = ref<{ date: string; count: number }[]>([]);
 
 const githubData = ref<GithubData>({
@@ -52,34 +51,7 @@ const githubData = ref<GithubData>({
 
 // Fonction pour obtenir les contributions
 async function getContributions(): Promise<GithubData> {
-  const headers = {
-    Authorization: `bearer ${config.app.githubToken}`,
-  };
-  const body = {
-    query: `query {
-      user(login: "Gammelinne") {
-        name
-        contributionsCollection {
-          contributionCalendar {
-            totalContributions
-            weeks {
-              contributionDays {
-                contributionCount
-                date
-              }
-            }
-          }
-        }
-      }
-    }`,
-  };
-
-  const response = await fetch("https://api.github.com/graphql", {
-    method: "POST",
-    body: JSON.stringify(body),
-    headers: headers,
-  });
-
+  const response = await fetch("/api/github");
   const data: GithubData = await response.json();
   return data;
 }

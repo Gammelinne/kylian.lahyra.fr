@@ -26,9 +26,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-07-14",
   plugins: ["~/plugins/calendar-heatmap.client.ts"],
   runtimeConfig: {
-    app: {
-      githubToken: process.env.NUXT_GITHUB_TOKEN
-    },
+    githubToken: process.env.NUXT_GITHUB_TOKEN
   },
 
   app: {
