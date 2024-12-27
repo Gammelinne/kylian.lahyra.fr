@@ -1,7 +1,7 @@
 // server/api/github.ts
-import { defineEventHandler } from 'h3';
+import { defineEventHandler } from "h3";
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async () => {
   const config = useRuntimeConfig();
   const headers = {
     Authorization: `bearer ${config.githubToken}`,
@@ -25,8 +25,8 @@ export default defineEventHandler(async (event) => {
     }`,
   };
 
-  const response = await $fetch('https://api.github.com/graphql', {
-    method: 'POST',
+  const response = await $fetch("https://api.github.com/graphql", {
+    method: "POST",
     body: JSON.stringify(body),
     headers: headers,
   });
