@@ -12,7 +12,13 @@ export default defineNuxtConfig({
   ],
 
   i18n: {
-    vueI18n: "./i18n.config.ts",
+    locales: [
+      { code: "en", iso: "en-US", file: "en.ts" },
+      { code: "fr", iso: "fr-FR", file: "fr.ts" },
+    ],
+    defaultLocale: "fr",
+    langDir: "locales/",
+    strategy: 'no_prefix',
   },
 
   primevue: {
