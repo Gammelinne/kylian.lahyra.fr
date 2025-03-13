@@ -1,4 +1,5 @@
 <template>
+  <!-- App.vue -->
   <div id="app" class="dark">
     <NavbarComponents />
     <NuxtPage class="min-h-screen" />
