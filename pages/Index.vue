@@ -1,22 +1,22 @@
 <script setup lang="ts">
 const $t = useI18n().t;
-useHead({
-  templateParams: {
-    page: $t("Route.Home"),
-  },
+const pageTitle = computed(() => $t("Route.Home"));
+
+watchEffect(() => {
+  useHead({
+    templateParams: {
+      page: pageTitle.value,
+    },
+  });
 });
 </script>
 
 <template>
   <ClientOnly>
     <div class="index-background">
-      <div
-        class="flex flex-col md:flex-row min-h-screen md:mt-[-4.5rem] mx-8 space-x-3"
-      >
+      <div class="flex flex-col md:flex-row min-h-screen md:mt-[-4.5rem] mx-8 space-x-3">
         <!-- Partie gauche -->
-        <div
-          class="flex flex-col justify-center w-full md:w-5/12 text-center sm:text-left"
-        >
+        <div class="flex flex-col justify-center w-full md:w-5/12 text-center sm:text-left">
           <h1 class="text-4xl mt-6 mb-2 font-bold">
             {{ $t("Home.Title.FirstName") }}
             <span class="text-purple-500">{{ $t("Home.Title.LastName") }}</span>
@@ -31,49 +31,17 @@ useHead({
               {{ $t("Home.Description") }}
             </h2>
           </div>
-          <div
-            class="flex space-x-2 mb-5 items-center justify-center sm:justify-start"
-          >
-            <Button
-              size="small"
-              as="a"
-              :label="$t('Home.Resume')"
-              href="/resume.pdf"
-              target="_blank"
-              icon="pi pi-file-pdf"
-            />
-            <Button
-              size="small"
-              as="a"
-              :label="$t('Home.Portfolio')"
-              href="https://kylianrenault.lahyra.fr"
-              target="_blank"
-              icon="pi pi-link"
-            />
-            <Button
-              size="small"
-              as="a"
-              icon="pi pi-github"
-              href="https://github.com/Gammelinne"
-              severity="secondary"
-              target="_blank"
-            />
-            <Button
-              size="small"
-              as="a"
-              severity="secondary"
-              icon="pi pi-linkedin"
-              href="https://www.linkedin.com/in/kylian-renault/"
-              target="_blank"
-            />
-            <Button
-              size="small"
-              as="a"
-              severity="secondary"
-              icon="pi pi-envelope"
-              href="mailto:kylian.noe14@gmail.com"
-              target="_blank"
-            />
+          <div class="flex space-x-2 mb-5 items-center justify-center sm:justify-start">
+            <Button size="small" as="a" :label="$t('Home.Resume')" href="/resume.pdf" target="_blank"
+              icon="pi pi-file-pdf" />
+            <Button size="small" as="a" :label="$t('Home.Portfolio')" href="https://kylianrenault.lahyra.fr"
+              target="_blank" icon="pi pi-link" />
+            <Button size="small" as="a" icon="pi pi-github" href="https://github.com/Gammelinne" severity="secondary"
+              target="_blank" />
+            <Button size="small" as="a" severity="secondary" icon="pi pi-linkedin"
+              href="https://www.linkedin.com/in/kylian-renault/" target="_blank" />
+            <Button size="small" as="a" severity="secondary" icon="pi pi-envelope" href="mailto:kylian.noe14@gmail.com"
+              target="_blank" />
           </div>
         </div>
         <!-- Partie droite -->
