@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     ],
     defaultLocale: "fr",
     langDir: "locales/",
-    strategy: 'no_prefix',
+    strategy: "no_prefix",
   },
 
   primevue: {
