@@ -90,7 +90,7 @@ watchEffect(() => {
             </template>
             <template #content>
               <HeatmapComponents />
-              <hr class="my-2" >
+              <hr class="my-2" />
               <InformationComponents />
             </template>
           </Card>

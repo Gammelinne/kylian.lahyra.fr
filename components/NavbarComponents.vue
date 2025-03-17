@@ -11,15 +11,14 @@ import logo from "@/assets/images/logos/logo.png";
 
 // Set Locale
 const { locale } = useI18n();
-const $t = useI18n().t;
 
 // Set the route
 const router = useRouter();
-const route = ref(getRoutes($t, router));
+const route = ref(getRoutes(router));
 
 // Watch the locale and update the route language
 watch(locale, () => {
-  route.value = getRoutes($t, router);
+  route.value = getRoutes(router);
 });
 </script>
 

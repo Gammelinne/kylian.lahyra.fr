@@ -27,6 +27,23 @@ export default defineNuxtConfig({
     options: {
       ripple: true,
     },
+    components: {
+      include: [
+        "Button",
+        "Card",
+        "Timeline",
+        "Tabs",
+        "TabList",
+        "TabPanels",
+        "TabPanel",
+        "Dialog",
+        "DataTable",
+        "Column",
+        "Skeleton",
+        "Menubar",
+        "Image",
+      ],
+    },
   },
 
   css: ["primeicons/primeicons.css"],

@@ -31,7 +31,7 @@ watchEffect(() => {
               :src="education.logo"
               alt="logo"
               class="w-24"
-            >
+            />
             <h5>{{ education.date }}</h5>
             <p>{{ education.location }}</p>
             <Chip
