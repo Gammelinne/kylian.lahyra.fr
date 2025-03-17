@@ -6,6 +6,7 @@ import type {
 } from "vue-i18n";
 import type { Router } from "vue-router";
 
+//Refactor the getRoutes function to use the new types
 export const getRoutes = (
   $t: ComposerTranslation<
     { [x: string]: LocaleMessage<VueMessageType> },
@@ -15,7 +16,7 @@ export const getRoutes = (
     string,
     string
   >,
-  router: string[] | Router,
+  router: Router,
 ) => [
   {
     label: $t("Route.Home"),

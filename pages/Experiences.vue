@@ -87,7 +87,7 @@ onBeforeUnmount(() => {
                       ? ' float-left'
                       : ' float-right')
                   "
-                />
+                >
                 <p class="my-1 text-md font-bold">
                   <i class="pi pi-calendar" />
                   {{ slotProps.item.date }}
@@ -175,7 +175,7 @@ onBeforeUnmount(() => {
                 :src="experience.logo"
                 alt="logo"
                 class="w-24 mx-auto"
-              />
+              >
               <h5>{{ experience.date }}</h5>
               <p>{{ experience.location }}</p>
               <p>

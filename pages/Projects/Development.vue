@@ -60,7 +60,7 @@ watchEffect(() => {
                     :src="slotProps.data"
                     alt="Project Image"
                     class="w-full h-64 object-cover"
-                  />
+                  >
                 </template>
               </Carousel>
             </template>
