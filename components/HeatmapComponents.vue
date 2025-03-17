@@ -72,7 +72,6 @@ const extractHeatMapData = (
   );
 };
 
-// Initialisation
 onBeforeMount(async () => {
   const data = await getContributions();
   githubData.value = data;
