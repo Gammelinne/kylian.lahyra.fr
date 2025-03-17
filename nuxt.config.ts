@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/robots",
     "@nuxt/eslint",
+    "@pinia/nuxt",
   ],
 
   i18n: {
