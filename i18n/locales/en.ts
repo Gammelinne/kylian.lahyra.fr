@@ -178,6 +178,8 @@ export default defineI18nConfig(() => ({
     Github: "Github",
     Title: "My Projects",
     Route: "API Routes list",
+    SeeLess: "See less",
+    SeeMore: "See more",
     One: {
       Title: "Lahyra",
       Date: "Since September 2023",

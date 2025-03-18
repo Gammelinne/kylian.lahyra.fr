@@ -1,12 +1,6 @@
 import type { Router } from "vue-router";
-export const getRoutes = (router: Router, t: any ) => [
-  {
-    label: t("Route.Home"),
-    icon: "pi pi-fw pi-home",
-    command: () => {
-      router.push("/");
-    },
-  },
+
+export const getRoutes = (router: Router, t: (key: string) => string) => [
   {
     label: t("Route.Education"),
     icon: "pi pi-fw pi-graduation-cap",

@@ -1,7 +1,7 @@
 import { definePreset } from "@primevue/themes";
-import Aura from "@primevue/themes/aura";
+import Lara from "@primevue/themes/lara";
 
-const MyPreset = definePreset(Aura, {
+const ThemePreset = {
   semantic: {
     primary: {
       50: "{zinc.50}",
@@ -47,7 +47,9 @@ const MyPreset = definePreset(Aura, {
       },
     },
   },
-});
+};
+
+const MyPreset = definePreset(Lara, ThemePreset);
 
 export default {
   preset: MyPreset,
@@ -55,3 +57,5 @@ export default {
     darkModeSelector: ".dark-mode",
   },
 };
+
+export { ThemePreset, MyPreset };

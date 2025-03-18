@@ -3,6 +3,7 @@ import { getRoutes } from "@/route";
 
 import LangButton from "./ui/LangButton.vue";
 import ThemeButton from "./ui/ThemeButton.vue";
+import StyleButton from "./ui/StyleButton.vue";
 import logo from "@/assets/images/logos/logo.png";
 
 const { locale } = useI18n();
@@ -19,11 +20,12 @@ watch(locale, () => {
 <template>
   <Menubar class="Navbar" :model="route">
     <template #start>
-      <Image class="mx-2" :src="logo" alt="logo" width="50" />
+      <Image id="logo" class="mx-2" :src="logo" alt="logo" width="50" @click="router.push('/')" />
     </template>
     <template #end>
       <ThemeButton />
       <LangButton />
+      <StyleButton />
     </template>
   </Menubar>
 </template>
@@ -32,5 +34,8 @@ watch(locale, () => {
 .Navbar {
   z-index: 2;
   position: sticky;
+}
+#logo {
+  cursor: pointer;
 }
 </style>

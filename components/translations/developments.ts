@@ -5,7 +5,7 @@ export interface Route {
 }
 
 export interface Project {
-  value: string;
+  id: number;
   title: string;
   description: string;
   technologies: string;
@@ -19,7 +19,7 @@ export const projects: ComputedRef<Project[]> = computed(() => {
   const { t } = useI18n();
   return [
     {
-      value: "0",
+      id: 0,
       title: t("Project.One.Title"),
       description: t("Project.One.Description"),
       technologies: t("Project.One.Technologies"),
@@ -37,7 +37,7 @@ export const projects: ComputedRef<Project[]> = computed(() => {
       images: ["https://cdn.wallpapersafari.com/30/62/jHBzTk.jpg"],
     },
     {
-      value: "1",
+      id: 1,
       title: t("Project.Two.Title"),
       description: t("Project.Two.Description"),
       technologies: t("Project.Two.Technologies"),
@@ -45,7 +45,7 @@ export const projects: ComputedRef<Project[]> = computed(() => {
       images: ["https://cdn.wallpapersafari.com/30/62/jHBzTk.jpg"],
     },
     {
-      value: "2",
+      id: 2,
       title: t("Project.Three.Title"),
       description: t("Project.Three.Description"),
       technologies: t("Project.Three.Technologies"),
@@ -53,7 +53,7 @@ export const projects: ComputedRef<Project[]> = computed(() => {
       images: ["https://cdn.wallpapersafari.com/30/62/jHBzTk.jpg"],
     },
     {
-      value: "3",
+      id: 3,
       title: t("Project.Four.Title"),
       description: t("Project.Four.Description"),
       technologies: t("Project.Four.Technologies"),
@@ -61,7 +61,7 @@ export const projects: ComputedRef<Project[]> = computed(() => {
       images: ["https://cdn.wallpapersafari.com/30/62/jHBzTk.jpg"],
     },
     {
-      value: "4",
+      id: 4,
       title: t("Project.Five.Title"),
       description: t("Project.Five.Description"),
       technologies: t("Project.Five.Technologies"),

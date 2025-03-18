@@ -42,6 +42,7 @@ export default defineNuxtConfig({
         "Skeleton",
         "Menubar",
         "Image",
+        "Tag",
       ],
     },
   },

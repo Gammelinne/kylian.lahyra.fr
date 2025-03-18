@@ -34,11 +34,11 @@ watchEffect(() => {
             >
             <h5>{{ education.date }}</h5>
             <p>{{ education.location }}</p>
-            <Chip
+            <Tag
               v-for="description in education.description.split(',')"
               :key="description"
               class="mr-1 mt-1"
-              :label="description"
+              :value="description"
             />
           </div>
         </template>
