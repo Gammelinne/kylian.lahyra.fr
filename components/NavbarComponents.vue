@@ -6,12 +6,13 @@ import ThemeButton from "./ui/ThemeButton.vue";
 import logo from "@/assets/images/logos/logo.png";
 
 const { locale } = useI18n();
+const { t } = useI18n();
 
 const router = useRouter();
-const route = ref(getRoutes(router));
+const route = ref(getRoutes(router, t));
 
 watch(locale, () => {
-  route.value = getRoutes(router);
+  route.value = getRoutes(router, t);
 });
 </script>
 

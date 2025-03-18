@@ -1,7 +1,5 @@
 import type { Router } from "vue-router";
-const { t } = useI18n();
-//Refactor the getRoutes function to use the new type
-export const getRoutes = (router: Router) => [
+export const getRoutes = (router: Router, t: any ) => [
   {
     label: t("Route.Home"),
     icon: "pi pi-fw pi-home",
