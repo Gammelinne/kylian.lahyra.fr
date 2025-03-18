@@ -17,47 +17,27 @@ export const getRoutes = (router: Router, t: (key: string) => string) => [
   },
   {
     label: t("Route.Projects.Title"),
+    icon: "pi pi-fw pi-globe",
+    command: () => {
+      router.push("/projects");
+    },
+  },
+  {
+    label: t("Route.Hobbies.Title"),
     icon: "pi pi-fw pi-folder",
     items: [
       {
-        label: t("Route.Projects.Development"),
-        icon: "pi pi-fw pi-globe",
-        command: () => {
-          router.push("/projects/development");
-        },
-      },
-      {
-        label: t("Route.Projects.Music"),
+        label: t("Route.Hobbies.Music"),
         icon: "pi pi-fw pi-play-circle",
         command: () => {
-          router.push("/projects/music");
+          router.push("/hobbies/music");
         },
       },
       {
-        label: t("Route.Projects.Games"),
+        label: t("Route.Hobbies.Games"),
         icon: "pi pi-fw pi-desktop",
         command: () => {
-          router.push("/projects/games");
-        },
-      },
-    ],
-  },
-  {
-    label: t("Route.About.Title"),
-    icon: "pi pi-fw pi-info-circle",
-    items: [
-      {
-        label: t("Route.About.Skills"),
-        icon: "pi pi-fw pi-briefcase",
-        command: () => {
-          router.push("/about/skills");
-        },
-      },
-      {
-        label: t("Route.About.Hobbies"),
-        icon: "pi pi-fw pi-heart",
-        command: () => {
-          router.push("/about/hobbies");
+          router.push("/hobbies/games");
         },
       },
     ],

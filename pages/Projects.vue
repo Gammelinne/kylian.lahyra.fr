@@ -2,8 +2,8 @@
 import { projects } from "@/components/translations/developments";
 const { t } = useI18n();
 const dialogVisibility = ref<Record<string, boolean>>({});
-const expandedDescription = ref<Record<number, boolean>>({}) as Ref<Record<number, boolean>>;
-const pageTitle = computed(() => t("Route.Projects.Development"));
+const expandedDescription = ref<Record<number, boolean>>({})
+const pageTitle = computed(() => t("Route.Projects.Title"));
 watchEffect(() => {
   useHead({
     templateParams: {

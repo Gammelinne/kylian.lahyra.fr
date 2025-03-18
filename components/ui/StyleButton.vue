@@ -8,7 +8,7 @@ import Material from "@primevue/themes/material";
 import type { Preset as MaterialPreset } from '@primevue/themes/material/';
 import Aura from "@primevue/themes/aura";
 import type { Preset as AuraPreset } from '@primevue/themes/aura/';
-import { ThemePreset } from "@/theme";
+import { ThemePreset } from "@/utils/theme";
 
 const popover = ref();
 

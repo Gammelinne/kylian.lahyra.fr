@@ -39,6 +39,11 @@ export default defineI18nConfig(() => ({
       Skills: "Skills",
       Hobbies: "Hobbies",
     },
+    Hobbies: {
+      Title: "Hobbies",
+      Music: "Music",
+      Games: "Games",
+    },
     Contact: "Contact",
     Education: "Education",
     Experience: "Experiences",

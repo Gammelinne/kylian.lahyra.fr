@@ -32,3 +32,7 @@ jobs:
           tags: gameline/primevue-nuxt:latest
           build-args: |
             NUXT_GITHUB_TOKEN=${{ secrets.VITE_GITHUB_TOKEN }}
+            NUXT_SPOTIFY_CLIENT_ID=${{ secrets.NUXT_SPOTIFY_CLIENT_ID }}
+            NUXT_SPOTIFY_CLIENT_SECRET=${{ secrets.NUXT_SPOTIFY_CLIENT_SECRET }}
+
+

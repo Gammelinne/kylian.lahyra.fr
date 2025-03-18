@@ -23,7 +23,7 @@ export default defineNuxtConfig({
   },
 
   primevue: {
-    importTheme: { from: "@/theme" },
+    importTheme: { from: "@/utils/theme" },
     options: {
       ripple: true,
     },
@@ -35,6 +35,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     githubToken: process.env.NUXT_GITHUB_TOKEN,
     Env: process.env.NODE_ENV,
+    spotifyClientId: process.env.NUXT_SPOTIFY_CLIENT_ID,
+    spotifyClientSecret: process.env.NUXT_SPOTIFY_CLIENT_SECRET,
   },
 
   app: {
