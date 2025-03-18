@@ -26,7 +26,6 @@ onMounted(() => {
 
 <template>
   <Button
-    class="p-button-rounded"
     :icon="mode.preference === 'dark' ? 'pi pi-sun' : 'pi pi-moon'"
     text
     @click="toggleTheme"

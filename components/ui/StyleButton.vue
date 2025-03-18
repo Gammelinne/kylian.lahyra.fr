@@ -29,11 +29,11 @@ const changeTheme = (theme:
 
 </script>
 <template>
-  <Button @click="toggle" icon="pi pi-palette" variant="text" rounded />
+  <Button @click="toggle" icon="pi pi-palette" text />
   <Popover ref="popover">
-    <Button @click="changeTheme(Lara)" variant="text" label="Lara" />
-    <Button @click="changeTheme(Nora)" variant="text" label="Nora" />
-    <Button @click="changeTheme(Material)" variant="text" label="Material" />
-    <Button @click="changeTheme(Aura)" variant="text" label="Aura" />
+    <Button @click="changeTheme(Lara)" text label="Lara" />
+    <Button @click="changeTheme(Nora)" text label="Nora" />
+    <Button @click="changeTheme(Material)" text label="Material" />
+    <Button @click="changeTheme(Aura)" text label="Aura" />
   </Popover>
 </template>
