@@ -26,12 +26,12 @@ watchEffect(() => {
         </template>
         <template #content>
           <div class="space-y-2">
-            <img
+            <Image
               v-if="education.logo"
               :src="education.logo"
               alt="logo"
-              class="w-24"
-            >
+              width="100"
+            />
             <h5>{{ education.date }}</h5>
             <p>{{ education.location }}</p>
             <Tag

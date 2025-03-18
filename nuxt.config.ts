@@ -27,24 +27,6 @@ export default defineNuxtConfig({
     options: {
       ripple: true,
     },
-    components: {
-      include: [
-        "Button",
-        "Card",
-        "Timeline",
-        "Tabs",
-        "TabList",
-        "TabPanels",
-        "TabPanel",
-        "Dialog",
-        "DataTable",
-        "Column",
-        "Skeleton",
-        "Menubar",
-        "Image",
-        "Tag",
-      ],
-    },
   },
 
   css: ["primeicons/primeicons.css"],
@@ -52,6 +34,7 @@ export default defineNuxtConfig({
   plugins: ["~/plugins/calendar-heatmap.client.ts"],
   runtimeConfig: {
     githubToken: process.env.NUXT_GITHUB_TOKEN,
+    Env: process.env.NODE_ENV,
   },
 
   app: {

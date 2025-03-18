@@ -1,11 +1,14 @@
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
 const { locale, setLocale } = useI18n();
 
 onBeforeMount(() => {
-  if (localStorage.getItem("locale")) {
-    setLocale(localStorage.getItem("locale"));
+  const savedLocale = localStorage.getItem("locale") as "en" | "fr";
+  if (savedLocale) {
+    setLocale(savedLocale);
   }
 });
+
 watch(locale, () => {
   localStorage.setItem("locale", locale.value);
 });
@@ -13,7 +16,7 @@ watch(locale, () => {
 const popover = ref();
 const toggle = (event: Event) => {
   popover.value.toggle(event);
-}
+};
 </script>
 
 <template>

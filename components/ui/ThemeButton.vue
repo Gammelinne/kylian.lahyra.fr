@@ -1,33 +1,26 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
 
 const mode = useColorMode();
+
+const applyTheme = (theme: string) => {
+  document.body.classList.toggle("dark-mode", theme === "dark");
+  mode.preference = theme;
+};
+
 const toggleTheme = () => {
-  document.body.classList.toggle("dark-mode");
-  if (mode.preference === "dark") {
-    mode.preference = "light";
-  } else {
-    mode.preference = "dark";
-  }
-  localStorage.setItem("theme", mode.preference);
+  const newTheme = mode.preference === "dark" ? "light" : "dark";
+  applyTheme(newTheme);
+  localStorage.setItem("theme", newTheme);
 };
 
 onMounted(() => {
-  const theme = localStorage.getItem("theme");
-  if (theme) {
-    mode.preference = theme;
-  } else {
-    mode.preference = window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-  }
+  const storedTheme = localStorage.getItem("theme");
+  const initialTheme =
+    storedTheme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  applyTheme(initialTheme);
 });
 </script>
 
 <template>
-  <Button
-    :icon="mode.preference === 'dark' ? 'pi pi-sun' : 'pi pi-moon'"
-    text
-    @click="toggleTheme"
-  />
+  <Button :icon="mode.preference === 'dark' ? 'pi pi-sun' : 'pi pi-moon'" text @click="toggleTheme" />
 </template>
