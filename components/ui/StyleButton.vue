@@ -31,11 +31,10 @@ const changeTheme = (theme: LaraPreset | NoraPreset | MaterialPreset | AuraPrese
   usePreset(definePreset(theme, ThemePreset));
 };
 
-onMounted(() => {
-  // Récupérer le thème stocké
+onMounted(async () => {
+  await nextTick();
   const storedThemeName = localStorage.getItem("style") || "Lara";
   const initialTheme = themes[storedThemeName as keyof typeof themes] || Lara;
-
   changeTheme(initialTheme, storedThemeName);
 });
 </script>
