@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const mode = useColorMode();
 
 const applyTheme = (theme: string) => {
@@ -16,11 +15,18 @@ const toggleTheme = () => {
 onMounted(() => {
   const storedTheme = localStorage.getItem("theme");
   const initialTheme =
-    storedTheme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    storedTheme ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light");
   applyTheme(initialTheme);
 });
 </script>
 
 <template>
-  <Button :icon="mode.preference === 'dark' ? 'pi pi-sun' : 'pi pi-moon'" text @click="toggleTheme" />
+  <Button
+    :icon="mode.preference === 'dark' ? 'pi pi-sun' : 'pi pi-moon'"
+    text
+    @click="toggleTheme"
+  />
 </template>

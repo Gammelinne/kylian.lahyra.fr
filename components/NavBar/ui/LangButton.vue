@@ -20,9 +20,9 @@ const toggle = (event: Event) => {
 </script>
 
 <template>
-  <Button @click="toggle" icon="pi pi-globe" variant="text" />
+  <Button icon="pi pi-globe" variant="text" @click="toggle" />
   <Popover ref="popover">
-    <Button @click="setLocale('en')" variant="text" label="EN" />
-    <Button @click="setLocale('fr')" variant="text" label="FR" />
+    <Button variant="text" label="EN" @click="setLocale('en')" />
+    <Button variant="text" label="FR" @click="setLocale('fr')" />
   </Popover>
 </template>

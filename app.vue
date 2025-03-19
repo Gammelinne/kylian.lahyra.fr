@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import NavbarComponents from "@/components/NavBar/NavbarComponents.vue";
+</script>
+
 <template>
   <div id="app" class="dark">
     <NavbarComponents />
@@ -10,4 +14,3 @@
   font-family: "Roboto", sans-serif;
 }
 </style>
-
