@@ -16,6 +16,19 @@ jobs:
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3.8.0
+      
+      - name: Debug secrets
+        run: |
+          echo "::add-mask::${{ secrets.NUXT_SPOTIFY_CLIENT_ID }}"
+          echo "::add-mask::${{ secrets.NUXT_SPOTIFY_CLIENT_SECRET }}"
+          echo "::add-mask::${{ secrets.DOCKER_HUB_USERNAME }}"
+          echo "::add-mask::${{ secrets.DOCKER_HUB_PASSWORD }}"
+          echo "::add-mask::${{ secrets.VITE_GITHUB_TOKEN }}"
+          echo "NUXT_SPOTIFY_CLIENT_ID is set"
+          echo "NUXT_SPOTIFY_CLIENT_SECRET is set"
+          echo "DOCKER_HUB_USERNAME is set"
+          echo "DOCKER_HUB_PASSWORD is set"
+          echo "VITE_GITHUB_TOKEN is set"
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3.3.0
