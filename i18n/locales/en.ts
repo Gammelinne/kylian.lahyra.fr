@@ -492,4 +492,20 @@ export default defineI18nConfig(() => ({
         "AdonisJS, Vue.js, Vuetify, WebSockets, JWT, Pusher, I18n, Passport, Axios, LocalStorage, Git, RESTful APIs, GraphQL, Docker, Continuous Integration, Unit Testing, End-to-End Testing",
     },
   },
+  Hobbies: {
+    Music: {
+      Title: "Music",
+      Artist: "My favorite artists",
+      Playlist: "My playlists",
+      Question: "What are the French artists in the list?",
+      Submit: "Submit",
+      Success: "Congratulations!",
+      Error: "Try again",
+      SucessMessage: "You have successfully completed the quiz!",
+      ErrorMessage: "You have not completed the quiz correctly! (3 answers)",
+    },
+    Games: {
+      Title: "Jeux",
+    },
+  },
 }));

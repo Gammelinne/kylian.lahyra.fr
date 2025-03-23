@@ -8,12 +8,16 @@ const toast = useToast();
 const selectedArtists = ref<Array<string>>([]);
 const { t } = useI18n();
 const submit = () => {
-  const correct = selectedArtists.value.includes("167abweXl3demO9x0VMMeJ") && selectedArtists.value.includes("4EePV5BljRSXJnYww4d5Qa") && selectedArtists.value.includes("45yEuthJ9yq1rNXAOpBnqM");
+  const requiredArtists = ["167abweXl3demO9x0VMMeJ", "4EePV5BljRSXJnYww4d5Qa", "45yEuthJ9yq1rNXAOpBnqM"];
+
+  const correct = selectedArtists.value.length === 3 &&
+    requiredArtists.every(artist => selectedArtists.value.includes(artist)) &&
+    selectedArtists.value.sort().join() === requiredArtists.sort().join();
   if (correct) {
-    toast.add({ severity: 'success', summary: 'Info', detail: 'Message Content', life: 3000 });
+    toast.add({ severity: 'success', summary: t("Hobbies.Music.Success"), detail: t("Hobbies.Music.SuccessMessage"), life: 3000 });
 
   } else {
-    toast.add({ severity: 'error', summary: 'Error', detail: 'Message Content', life: 3000 });
+    toast.add({ severity: 'error', summary: t("Hobbies.Music.Error"), detail: t("Hobbies.Music.ErrorMessage"), life: 3000 });
   }
 }
 </script>
