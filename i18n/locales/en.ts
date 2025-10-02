@@ -5,7 +5,7 @@ export default defineI18nConfig(() => ({
       FirstName: "Kylian",
       LastName: "Renault",
     },
-    Job: "Associate Digital Technician apprentice at Capgemini",
+    Job: "Admitted to a specialized master’s degree in Project Portfolio Management at CESI Graduate School of Engineering (currently looking for a work-study program)",
     Infos: {
       Title: "My informations ",
       Name: "Kylian Renault",
@@ -18,7 +18,7 @@ export default defineI18nConfig(() => ({
     },
     Resume: "Resume",
     Portfolio: "Portfolio",
-    Description: `Computer engineering student. Passionate about web and mobile development, I master modern technologies such as Vue.js, React.js, Node.js, Express.js, AdonisJs, MongoDB, MySQL, and many others.`,
+    Description: `Computer engineering student, I am passionate about web and mobile development. I master modern technologies such as Vue.js, React.js, Node.js, Express.js, AdonisJs, MongoDB, MySQL, and many others. I have been admitted to a specialized master’s degree in Project Portfolio Management at CESI Graduate School of Engineering and I am currently looking for a work-study program for this year.`,
     GithubActivity: "My Github Activity",
     Contributions: "Contributions",
     Github: "Github",
@@ -52,10 +52,20 @@ export default defineI18nConfig(() => ({
     Loading: "Loading...",
     Title: "Educations",
     More: "Learn more",
+    Five: {
+      Title: "CESI Graduate School of Engineering: Specialized Master's Degree in Project Portfolio Management (Currently looking for a work-study program)",
+      Date: "Since 09/2025",
+      Website:
+        "https://www.cesi.fr/formation/mastere-specialise-manager-de-portefeuille-de-projets-innovation-2108680/",
+      Description:
+        "Project management,Team management,English,Agility,DevOps,Cloud",
+      Location: "4 Place Boston - 14200 Hérouville-Saint-Clair",
+    },
     Four: {
       Title:
-        "CESI Engineering School: Computer Science specialization in data science and artificial intelligence",
-      Date: "Since September 2022",
+        "CESI Graduate School of Engineering: Engineering Degree in Computer Science with a specialization in Data Science and Artificial Intelligence (Work-study program at Capgemini)",
+      Date: "2022 - 2025",
+
       Website:
         "https://www.cesi.fr/programmes/cursus-ingenieur-5-ans/#cycleprepa",
       Description:

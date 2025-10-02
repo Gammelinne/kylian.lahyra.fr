@@ -5,7 +5,7 @@ export default defineI18nConfig(() => ({
       FirstName: "Kylian",
       LastName: "Renault",
     },
-    Job: "Associate Digital Technician en alternance chez Capgemini",
+    Job: "Admis en mastère spécialisé en management de portefeuille de projets à CESI École d'ingénieurs (en recherche d'alternance)",
     Infos: {
       Title: "Mes informations",
       Name: "Kylian Renault",
@@ -18,7 +18,7 @@ export default defineI18nConfig(() => ({
     },
     Resume: "CV",
     Portfolio: "Portfolio",
-    Description: `Etudiant en ingénierie informatique, je suis passionné par le développement web et mobile, je maitrise les technologies modernes telles que Vue.js, React.js, Node.js, Express.js, AdonisJs, MongoDB, MySQL, et bien d'autres.`,
+    Description: `Etudiant en ingénierie informatique, je suis passionné par le développement web et mobile, je maitrise les technologies modernes telles que Vue.js, React.js, Node.js, Express.js, AdonisJs, MongoDB, MySQL, et bien d'autres. Je suis admis en mastère spécialisé en management de portefeuille de projets à CESI École d'ingénieurs et je recherche actuellement une alternance pour cette année.`,
     GithubActivity: "Mon activité Github",
     Contributions: "Contributions",
     Github: "Github",
@@ -52,10 +52,19 @@ export default defineI18nConfig(() => ({
     Loading: "Chargement...",
     Title: "Educations",
     More: "En savoir plus",
+    Five: {
+      Title: "CESI École d'ingénieurs: Mastère spécialisé en management de portefeuille de projets (En recherche d'alternance)",
+      Date: "Depuis 09/2025",
+      Website:
+        "https://www.cesi.fr/formation/mastere-specialise-manager-de-portefeuille-de-projets-innovation-2108680/",
+      Description:
+        "Management de projet,Management d'équipe,Anglais,Agilité,DevOps,Cloud",
+      Location: "4 place boston - 14200 Hérouville-Saint-Clair",
+    },
     Four: {
       Title:
-        "CESI École d'ingénieurs: spécialité informatique en data science et intelligence artificielle",
-      Date: "Depuis septembre 2022",
+        "CESI École d'ingénieurs : Diplôme d'ingénieur spécialité informatique en data science et intelligence artificielle en alternance chez Capgemini",
+      Date: "2022 - 2025",
       Website:
         "https://www.cesi.fr/programmes/cursus-ingenieur-5-ans/#cycleprepa",
       Description:
@@ -97,11 +106,11 @@ export default defineI18nConfig(() => ({
     SeasonalJobs: "Travail saisonnier",
     Ten: {
       Title: "Développeur logiciel",
-      Date: "Depuis 11/2024",
+      Date: "11/2024 - 09/2025",
       Website: "https://www.capgemini.com/fr-fr/",
       Description:
         "Développement d'applications logicielles - Maintenance d'applications logicielles - Tests unitaires - Rédaction de documentation technique - Management de projet",
-      Location: "Capgemini (altran) - 50440 Beaumont-Hague",
+      Location: "Capgemini (Altran) - 50440 Beaumont-Hague",
     },
     Nine: {
       Title: "Animateur club de plage (Travail saisonnier)",

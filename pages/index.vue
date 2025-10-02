@@ -16,7 +16,7 @@ watchEffect(() => {
 const buttons = [
   {
     label: t("Home.Resume"),
-    href: "/resume.pdf",
+    href: "/documents/cv.pdf",
     icon: "pi pi-file-pdf",
     severity: "primary",
     rounded: false,

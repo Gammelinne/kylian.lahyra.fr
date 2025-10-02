@@ -16,6 +16,15 @@ export const educations: ComputedRef<Education[]> = computed(() => {
   return [
     {
       id: 1,
+      title: t("Education.Five.Title"),
+      location: t("Education.Five.Location"),
+      website: t("Education.Five.Website"),
+      date: t("Education.Five.Date"),
+      description: t("Education.Five.Description"),
+      logo: logoCesi,
+    },
+    {
+      id: 2,
       title: t("Education.Four.Title"),
       location: t("Education.Four.Location"),
       website: t("Education.Four.Website"),
@@ -24,7 +33,7 @@ export const educations: ComputedRef<Education[]> = computed(() => {
       logo: logoCesi,
     },
     {
-      id: 2,
+      id: 3,
       title: t("Education.Three.Title"),
       location: t("Education.Three.Location"),
       website: t("Education.Three.Website"),
@@ -33,7 +42,7 @@ export const educations: ComputedRef<Education[]> = computed(() => {
       logo: logoCesi,
     },
     {
-      id: 3,
+      id: 4,
       title: t("Education.Two.Title"),
       location: t("Education.Two.Location"),
       website: t("Education.Two.Website"),
@@ -42,7 +51,7 @@ export const educations: ComputedRef<Education[]> = computed(() => {
       logo: logoUniversity,
     },
     {
-      id: 4,
+      id: 5,
       title: t("Education.One.Title"),
       location: t("Education.One.Location"),
       website: t("Education.One.Website"),
