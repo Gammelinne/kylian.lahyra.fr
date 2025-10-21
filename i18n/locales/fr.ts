@@ -5,7 +5,7 @@ export default defineI18nConfig(() => ({
       FirstName: "Kylian",
       LastName: "Renault",
     },
-    Job: "Admis en mastère spécialisé en management de portefeuille de projets à CESI École d'ingénieurs (en recherche d'alternance)",
+    Job: "Etudiant en mastère spécialisé en management de portefeuille de projets en alternance chez Agrial",
     Infos: {
       Title: "Mes informations",
       Name: "Kylian Renault",
@@ -18,7 +18,7 @@ export default defineI18nConfig(() => ({
     },
     Resume: "CV",
     Portfolio: "Portfolio",
-    Description: `Etudiant en ingénierie informatique, je suis passionné par le développement web et mobile, je maitrise les technologies modernes telles que Vue.js, React.js, Node.js, Express.js, AdonisJs, MongoDB, MySQL, et bien d'autres. Je suis admis en mastère spécialisé en management de portefeuille de projets à CESI École d'ingénieurs et je recherche actuellement une alternance pour cette année.`,
+    Description: `Etudiant en mastère spécialisé manageur de portefeuille de projet et en alternance chez agrial, je suis passionné par le développement web et mobile, je maitrise les technologies modernes telles que Vue.js, React.js, Node.js, Express.js, AdonisJs, MongoDB, MySQL, et bien d'autres.`,
     GithubActivity: "Mon activité Github",
     Contributions: "Contributions",
     Github: "Github",
@@ -53,7 +53,7 @@ export default defineI18nConfig(() => ({
     Title: "Educations",
     More: "En savoir plus",
     Five: {
-      Title: "CESI École d'ingénieurs: Mastère spécialisé en management de portefeuille de projets (En recherche d'alternance)",
+      Title: "CESI École d'ingénieurs: Mastère spécialisé en management de portefeuille de projets en alternance chez Agrial",
       Date: "Depuis 09/2025",
       Website:
         "https://www.cesi.fr/formation/mastere-specialise-manager-de-portefeuille-de-projets-innovation-2108680/",
@@ -104,8 +104,16 @@ export default defineI18nConfig(() => ({
     Website: "En savoir plus",
     ComputerScience: "En lien avec l'informatique",
     SeasonalJobs: "Travail saisonnier",
+    Eleven : {
+      Title: "Alternant manageur de portefeuille de projets IT en alternance",
+      Date: "Depuis 09/2025",
+      Website: "https://www.agrial.com/",
+      Description:
+        "Management de portefeuille de projets - Coordination des équipes projets - Suivi des indicateurs de performance - Gestion des risques - Communication avec les parties prenantes",
+      Location: "Agrial - 14000 Caen",
+    },
     Ten: {
-      Title: "Développeur logiciel",
+      Title: "Développeur logiciel en alternance",
       Date: "11/2024 - 09/2025",
       Website: "https://www.capgemini.com/fr-fr/",
       Description:

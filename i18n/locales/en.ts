@@ -5,7 +5,7 @@ export default defineI18nConfig(() => ({
       FirstName: "Kylian",
       LastName: "Renault",
     },
-    Job: "Admitted to a specialized master’s degree in Project Portfolio Management at CESI Graduate School of Engineering (currently looking for a work-study program)",
+    Job: "Specialized Master's Student in Project Portfolio Management in a work-study program at Agrial",
     Infos: {
       Title: "My informations ",
       Name: "Kylian Renault",
@@ -18,7 +18,7 @@ export default defineI18nConfig(() => ({
     },
     Resume: "Resume",
     Portfolio: "Portfolio",
-    Description: `Computer engineering student, I am passionate about web and mobile development. I master modern technologies such as Vue.js, React.js, Node.js, Express.js, AdonisJs, MongoDB, MySQL, and many others. I have been admitted to a specialized master’s degree in Project Portfolio Management at CESI Graduate School of Engineering and I am currently looking for a work-study program for this year.`,
+    Description: `Specialized Master's Student in Project Portfolio Management in a work-study program at Agrial, I am passionate about web and mobile development, mastering modern technologies such as Vue.js, React.js, Node.js, Express.js, AdonisJs, MongoDB, MySQL, and many others.`,
     GithubActivity: "My Github Activity",
     Contributions: "Contributions",
     Github: "Github",
@@ -53,7 +53,7 @@ export default defineI18nConfig(() => ({
     Title: "Educations",
     More: "Learn more",
     Five: {
-      Title: "CESI Graduate School of Engineering: Specialized Master's Degree in Project Portfolio Management (Currently looking for a work-study program)",
+      Title: "CESI Graduate School of Engineering: Specialized Master's Degree in Project Portfolio Management (work-study program at Agrial)",
       Date: "Since 09/2025",
       Website:
         "https://www.cesi.fr/formation/mastere-specialise-manager-de-portefeuille-de-projets-innovation-2108680/",
@@ -105,8 +105,16 @@ export default defineI18nConfig(() => ({
     Website: "Learn more",
     ComputerScience: "Related to computer science",
     SeasonalJobs: "Seasonal work",
+    Eleven : {
+      Title: "IT Project Portfolio Manager Work-study program",
+      Date: "Since 09/2025",
+      Website: "https://www.agrial.com/",
+      Description:
+        "Management of project portfolio - Coordination of project teams - Monitoring of performance indicators - Risk management - Communication with stakeholders",
+      Location: "Agrial - 14000 Caen",
+    },
     Ten: {
-      Title: "Software Developer",
+      Title: "Software Developer work-study program",
       Date: "Since 11/2024",
       Website: "https://www.capgemini.com/fr-fr/",
       Description:

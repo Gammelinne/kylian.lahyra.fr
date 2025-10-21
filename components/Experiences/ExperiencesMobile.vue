@@ -14,7 +14,7 @@ const { t } = useI18n();
         disabled
         class="p-button-rounded mx-1"
         icon="pi pi-desktop"
-        :severity="'primary'"
+        severity="success"
       />
       {{ t("Experience.ComputerScience") }}
     </p>
@@ -23,7 +23,7 @@ const { t } = useI18n();
         disabled
         class="p-button-rounded mx-2"
         icon="pi pi-briefcase"
-        :severity="'secondary'"
+        severity="secondary"
       />
       {{ t("Experience.SeasonalJobs") }}
     </p>

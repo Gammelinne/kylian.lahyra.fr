@@ -6,7 +6,7 @@ import pavillonLogo from "@/assets/images/logo/pavillon.jpeg";
 import festylandLogo from "@/assets/images/logo/logo-festyland.png";
 import mgmLogo from "@/assets/images/logo/mgm.png";
 import capLogo from "@/assets/images/logo/cap.jpg";
-
+import  agrialLogo from "@/assets/images/logo/agrial.jpg";
 interface Experience {
   title: string;
   location: string;
@@ -21,6 +21,17 @@ interface Experience {
 export const experiences: ComputedRef<Experience[]> = computed(() => {
   const { t } = useI18n();
   return [
+    // Agrial alternance 2025
+    {
+      title: t("Experience.Eleven.Title"),
+      location: t("Experience.Eleven.Location"),
+      website: t("Experience.Eleven.Website"),
+      date: t("Experience.Eleven.Date"),
+      description: t("Experience.Eleven.Description"),
+      isComputerScience: true,
+      position: "left",
+      logo: agrialLogo,
+    },
     // Capgemini internship 2025
     {
       title: t("Experience.Ten.Title"),
