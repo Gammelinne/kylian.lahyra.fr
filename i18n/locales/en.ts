@@ -30,6 +30,7 @@ export default defineI18nConfig(() => ({
     Projects: {
       Title: "Projects",
       Development: "Development",
+      Server: "My Server",
       Music: "Music",
       Games: "Games",
     },
