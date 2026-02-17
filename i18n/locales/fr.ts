@@ -204,13 +204,13 @@ export default defineI18nConfig(() => ({
     SeeLess: "Voir moins",
     SeeMore: "Voir plus",
     One: {
-      Title: "Lahyra",
+      Title: "Social Lahyra",
       Date: "Depuis septembre 2023",
       Website: "https://github.com/Gammelinne/Lahyra-back-V2",
       Description:
-        "Lahyra est mon plus grand projet personnel. Il a été créé en utilisant VueJS (JavaScript) pour le frontend et Laravel pour le backend (PHP). Ce projet comprend de nombreuses fonctionnalités avancées qui le rendent robuste et sécurisé. - Tout d'abord, parlons de l'authentification protégée par JWT (JSON Web Token). JWT est un mécanisme d'authentification très populaire utilisé dans les applications web modernes. L'avantage principal de JWT est qu'il permet de maintenir l'état de l'authentification du côté client, ce qui signifie que le serveur n'a pas besoin de stocker l'état de l'authentification pour chaque utilisateur. Au lieu de cela, lorsqu'un utilisateur se connecte avec succès, il reçoit un jeton JWT qui contient des informations d'identification encodées. Ce jeton est ensuite inclus dans chaque requête envoyée au serveur, permettant ainsi au serveur de vérifier l'authenticité et les autorisations de l'utilisateur à chaque requête. - En ce qui concerne la gestion des langues avec I18n, cela permet à Lahyra de prendre en charge plusieurs langues. Il s'agit d'une fonctionnalité importante pour les applications utilisées par un public international, car elle permet aux utilisateurs de choisir leur langue préférée. Grâce à cette fonctionnalité, les textes et les messages affichés à l'utilisateur peuvent être traduits facilement et dynamiquement, offrant ainsi une expérience plus personnalisée. - L'envoi de photos avec stockage constitue une autre fonctionnalité importante de Lahyra. Elle permet aux utilisateurs de télécharger des images sur le site. Ces images sont ensuite stockées de manière sécurisée sur un serveur ou un service de stockage approprié. Cela offre une solution pratique pour les utilisateurs qui souhaitent partager des photos ou des images dans le cadre de leur utilisation de Lahyra. - Une autre intégration essentielle dans Lahyra est celle de WebSocket avec Pusher. WebSocket est un protocole de communication bidirectionnel qui permet une communication en temps réel entre le client et le serveur. L'utilisation de WebSocket dans Lahyra permet des mises à jour instantanées et en temps réel, sans avoir besoin de recharger la page. Cela offre une expérience utilisateur plus réactive, en particulier pour les fonctionnalités qui nécessitent une mise à jour en temps réel, comme les notifications ou les conversations en direct. - En cliquant sur 'API Routes', vous pouvez accéder à une liste de toutes les routes qui fonctionnent sur le site. Certaines de ces routes sont protégées par des autorisations administrateur, ce qui signifie qu'elles ne sont accessibles qu'aux utilisateurs ayant des privilèges d'administrateur. Cette mesure de sécurité garantit que certaines fonctionnalités sensibles ou restreintes ne peuvent être utilisées que par des utilisateurs autorisés, renforçant ainsi la sécurité globale de l'application.",
+        "Social Lahyra est mon plus grand projet personnel. Il a été créé en utilisant VueJS (JavaScript) pour le frontend et Laravel pour le backend (PHP). Ce projet comprend de nombreuses fonctionnalités avancées qui le rendent robuste et sécurisé. - Tout d'abord, parlons de l'authentification protégée par JWT (JSON Web Token). JWT est un mécanisme d'authentification très populaire utilisé dans les applications web modernes. L'avantage principal de JWT est qu'il permet de maintenir l'état de l'authentification du côté client, ce qui signifie que le serveur n'a pas besoin de stocker l'état de l'authentification pour chaque utilisateur. Au lieu de cela, lorsqu'un utilisateur se connecte avec succès, il reçoit un jeton JWT qui contient des informations d'identification encodées. Ce jeton est ensuite inclus dans chaque requête envoyée au serveur, permettant ainsi au serveur de vérifier l'authenticité et les autorisations de l'utilisateur à chaque requête. - En ce qui concerne la gestion des langues avec I18n, cela permet à Lahyra de prendre en charge plusieurs langues. Il s'agit d'une fonctionnalité importante pour les applications utilisées par un public international, car elle permet aux utilisateurs de choisir leur langue préférée. Grâce à cette fonctionnalité, les textes et les messages affichés à l'utilisateur peuvent être traduits facilement et dynamiquement, offrant ainsi une expérience plus personnalisée. - L'envoi de photos avec stockage constitue une autre fonctionnalité importante de Lahyra. Elle permet aux utilisateurs de télécharger des images sur le site. Ces images sont ensuite stockées de manière sécurisée sur un serveur ou un service de stockage approprié. Cela offre une solution pratique pour les utilisateurs qui souhaitent partager des photos ou des images dans le cadre de leur utilisation de Lahyra. - Une autre intégration essentielle dans Lahyra est celle de WebSocket avec Pusher. WebSocket est un protocole de communication bidirectionnel qui permet une communication en temps réel entre le client et le serveur. L'utilisation de WebSocket dans Lahyra permet des mises à jour instantanées et en temps réel, sans avoir besoin de recharger la page. Cela offre une expérience utilisateur plus réactive, en particulier pour les fonctionnalités qui nécessitent une mise à jour en temps réel, comme les notifications ou les conversations en direct. - En cliquant sur 'API Routes', vous pouvez accéder à une liste de toutes les routes qui fonctionnent sur le site. Certaines de ces routes sont protégées par des autorisations administrateur, ce qui signifie qu'elles ne sont accessibles qu'aux utilisateurs ayant des privilèges d'administrateur. Cette mesure de sécurité garantit que certaines fonctionnalités sensibles ou restreintes ne peuvent être utilisées que par des utilisateurs autorisés, renforçant ainsi la sécurité globale de l'application.",
       Route: {
-        Description: "Liste des routes disponibles sur Lahyra",
+        Description: "Liste des routes disponibles sur Social Lahyra",
         1: {
           Method: "GET",
           Endpoint: "/laravel-websockets",
@@ -513,6 +513,38 @@ export default defineI18nConfig(() => ({
       Technologies:
         "AdonisJS, Vue.js, Vuetify, WebSockets, JWT, Pusher, I18n, Passport, Axios, LocalStorage, Git, RESTful APIs, GraphQL, Docker, Continuous Integration, Unit Testing, End-to-End Testing",
     },
+  },
+  Server: {
+    Title: "Mon Serveur",
+    Overview: "Présentation",
+    OverviewText: "Ceci est mon serveur personnel hébergé à la maison. Il exécute divers services et projets pour gérer des applications, bases de données et supervision.",
+    Specifications: "Spécifications",
+    CPU: "Processeur",
+    RAM: "RAM",
+    Storage: "Stockage",
+    CPUValue: "Intel Core n100",
+    RAMValue: "8GB DDR4",
+    StorageValue: "256GB NVMe SSD",
+    OSValue: "Ubuntu Server 24.04 LTS",
+    OS: "Système d'exploitation",
+    Docker: "Services Docker",
+    Netdata: "Netdata",
+    NetdataDesc: "Supervision du système et des conteneurs.",
+    Pihole: "Pi-hole",
+    PiholeDesc: "Blocage des publicités et trackers sur le réseau.",
+    MariaDB: "MariaDB",
+    MariaDBDesc: "Gestion des bases de données.",
+    Portfolio: "Portfolio",
+    PortfolioDesc: "Mon site personnel.",
+    Watchtower: "Watchtower",
+    WatchtowerDesc: "Mise à jour automatique des conteneurs.",
+    GitLab: "GitLab CE",
+    GitLabDesc: "Gestion Git et CI/CD auto-hébergée.",
+    PrimeVue: "PrimeVue Nuxt",
+    PrimeVueDesc: "Ce site web.",
+    JudoClub: "Judo Club Ouistreham",
+    JudoClubDesc: "Application web Node.js pour le club.",
+    Note: "Remarque : le tableau de bord intégré est en lecture seule pour des raisons de sécurité."
   },
   Hobbies: {
     Music: {

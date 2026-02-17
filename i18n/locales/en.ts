@@ -106,7 +106,7 @@ export default defineI18nConfig(() => ({
     Website: "Learn more",
     ComputerScience: "Related to computer science",
     SeasonalJobs: "Seasonal work",
-    Eleven : {
+    Eleven: {
       Title: "IT Project Portfolio Manager Work-study program",
       Date: "Since 09/2025",
       Website: "https://www.agrial.com/",
@@ -205,14 +205,14 @@ export default defineI18nConfig(() => ({
     SeeLess: "See less",
     SeeMore: "See more",
     One: {
-      Title: "Lahyra",
-      Date: "Since September 2023",
+      Title: "Scoial Lahyra",
+      Date: "2023 - 2024",
       Website: "https://github.com/Gammelinne/Lahyra-back-V2",
       Description:
-        "Lahyra is my largest personal project. It was created using VueJS (JavaScript) for the frontend and Laravel for the backend (PHP). This project includes many advanced features that make it robust and secure. - First, let's talk about authentication protected by JWT (JSON Web Token). JWT is a very popular authentication mechanism used in modern web applications. The main advantage of JWT is that it allows authentication state to be maintained on the client side, meaning the server does not need to store authentication states for each user. Instead, when a user successfully logs in, they receive a JWT token containing encoded credentials. This token is then included in each request sent to the server, allowing the server to verify the user's authenticity and permissions with each request. - Regarding language management with I18n, this allows Lahyra to support multiple languages. This is an important feature for applications used by an international audience, as it allows users to choose their preferred language. Thanks to this feature, the texts and messages displayed to the user can be easily and dynamically translated, offering a more personalized experience.- Image uploading with storage is another key feature of Lahyra. It allows users to upload images to the site. These images are then securely stored on a server or an appropriate storage service. This provides a convenient solution for users who wish to share photos or images as part of their use of Lahyra.- Another essential integration in Lahyra is WebSocket with Pusher. WebSocket is a bidirectional communication protocol that enables real time communication between the client and server. The use of WebSocket in Lahyra allows for instant, real time updates without needing to reload the page. This provides a more responsive user experience, especially for features that require real time updates, such as notifications or live chats.- By clicking on 'API Routes,' you can access a list of all routes working on the site. Some of these routes are protected by admin permissions, meaning they are only accessible to users with administrator privileges. This security measure ensures that certain sensitive or restricted features can only be used by authorized users, strengthening the overall security of the application.",
+        "Social Lahyra is my largest personal project. It was created using VueJS (JavaScript) for the frontend and Laravel for the backend (PHP). This project includes many advanced features that make it robust and secure. - First, let's talk about authentication protected by JWT (JSON Web Token). JWT is a very popular authentication mechanism used in modern web applications. The main advantage of JWT is that it allows authentication state to be maintained on the client side, meaning the server does not need to store authentication states for each user. Instead, when a user successfully logs in, they receive a JWT token containing encoded credentials. This token is then included in each request sent to the server, allowing the server to verify the user's authenticity and permissions with each request. - Regarding language management with I18n, this allows Lahyra to support multiple languages. This is an important feature for applications used by an international audience, as it allows users to choose their preferred language. Thanks to this feature, the texts and messages displayed to the user can be easily and dynamically translated, offering a more personalized experience.- Image uploading with storage is another key feature of Lahyra. It allows users to upload images to the site. These images are then securely stored on a server or an appropriate storage service. This provides a convenient solution for users who wish to share photos or images as part of their use of Lahyra.- Another essential integration in Lahyra is WebSocket with Pusher. WebSocket is a bidirectional communication protocol that enables real time communication between the client and server. The use of WebSocket in Lahyra allows for instant, real time updates without needing to reload the page. This provides a more responsive user experience, especially for features that require real time updates, such as notifications or live chats.- By clicking on 'API Routes,' you can access a list of all routes working on the site. Some of these routes are protected by admin permissions, meaning they are only accessible to users with administrator privileges. This security measure ensures that certain sensitive or restricted features can only be used by authorized users, strengthening the overall security of the application.",
 
       Route: {
-        Description: "List of available routes on Lahyra",
+        Description: "List of available routes on Social Lahyra",
         1: {
           Method: "GET",
           Endpoint: "/laravel-websockets",
@@ -526,5 +526,37 @@ export default defineI18nConfig(() => ({
     Games: {
       Title: "Jeux",
     },
+  },
+  Server: {
+    Title: "My Server",
+    Overview: "Overview",
+    OverviewText: "This is my personal server hosted at home. It runs various services and projects to manage applications, databases, and monitoring.",
+    Specifications: "Specifications",
+    CPU: "CPU",
+    RAM: "RAM",
+    Storage: "Storage",
+    OS: "Operating System",
+    CPUValue: "Intel Core n100",
+    RAMValue: "8GB DDR4",
+    StorageValue: "256GB NVMe SSD",
+    OSValue: "Ubuntu Server 24.04 LTS",
+    Docker: "Dockerized Services",
+    Netdata: "Netdata",
+    NetdataDesc: "System and container monitoring.",
+    Pihole: "Pi-hole",
+    PiholeDesc: "Network-wide ad and tracker blocking.",
+    MariaDB: "MariaDB",
+    MariaDBDesc: "Database management.",
+    Portfolio: "Portfolio",
+    PortfolioDesc: "My personal portfolio website.",
+    Watchtower: "Watchtower",
+    WatchtowerDesc: "Automatic container updates.",
+    GitLab: "GitLab CE",
+    GitLabDesc: "Self-hosted Git and CI/CD.",
+    PrimeVue: "PrimeVue Nuxt",
+    PrimeVueDesc: "This website.",
+    JudoClub: "Judo Club Ouistreham",
+    JudoClubDesc: "Node.js web app for the Judo club.",
+    Note: "Note: The embedded dashboard is read-only for security reasons."
   },
 }));

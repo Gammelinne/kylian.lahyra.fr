@@ -1,3 +1,14 @@
+import easysave  from "@/assets/images/EasySave/easysave.png";
+import easysave2 from "@/assets/images/EasySave/easysave2.png";
+import easysave3 from "@/assets/images/EasySave/easysave3.png";
+
+import lahyra from "@/assets/images/Lahyra/lahyrascreen.png";
+
+import portfolio from "@/assets/images/Portfolio/portfolio.png";
+import portfolio2 from "@/assets/images/Portfolio/portfolio2.png";
+
+import bot from "@/assets/images/Bot/bot.png";
+
 export interface Route {
   methode: string;
   endpoint: string;
@@ -12,7 +23,7 @@ export interface Project {
   website: string;
   route?: Record<number, Route>;
   embedded?: string;
-  images: string[];
+  images?: any[];
 }
 
 export const projects: ComputedRef<Project[]> = computed(() => {
@@ -34,7 +45,7 @@ export const projects: ComputedRef<Project[]> = computed(() => {
           },
         ]),
       ),
-      images: ["https://cdn.wallpapersafari.com/30/62/jHBzTk.jpg"],
+      images: [lahyra,lahyra],
     },
     {
       id: 1,
@@ -42,7 +53,7 @@ export const projects: ComputedRef<Project[]> = computed(() => {
       description: t("Project.Two.Description"),
       technologies: t("Project.Two.Technologies"),
       website: t("Project.Two.Website"),
-      images: ["https://cdn.wallpapersafari.com/30/62/jHBzTk.jpg"],
+      images: [portfolio, portfolio2],
     },
     {
       id: 2,
@@ -50,7 +61,7 @@ export const projects: ComputedRef<Project[]> = computed(() => {
       description: t("Project.Three.Description"),
       technologies: t("Project.Three.Technologies"),
       website: t("Project.Three.Website"),
-      images: ["https://cdn.wallpapersafari.com/30/62/jHBzTk.jpg"],
+      images: [easysave, easysave2, easysave3],
     },
     {
       id: 3,
@@ -58,7 +69,7 @@ export const projects: ComputedRef<Project[]> = computed(() => {
       description: t("Project.Four.Description"),
       technologies: t("Project.Four.Technologies"),
       website: t("Project.Four.Website"),
-      images: ["https://cdn.wallpapersafari.com/30/62/jHBzTk.jpg"],
+      images: [bot,bot],
     },
     {
       id: 4,
@@ -77,7 +88,6 @@ export const projects: ComputedRef<Project[]> = computed(() => {
         ]),
       ),
       embedded: t("Project.Five.Embed"),
-      images: ["https://cdn.wallpapersafari.com/30/62/jHBzTk.jpg"],
     },
   ];
 });
