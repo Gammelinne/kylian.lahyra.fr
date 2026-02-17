@@ -53,6 +53,13 @@ export const getRoutes = (router: Router, t: (key: string) => string) => [
           router.push("/hobbies/music");
         },
       },
+      {
+        label: t("Route.Hobbies.Games"),
+        icon: "pi pi-fw pi-circle",
+        command: () => {
+          router.push("/hobbies/games");
+        },
+      }
     ],
   },
 ];
